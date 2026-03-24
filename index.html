@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snow Finder - 全国スキー場比較ダッシュボード</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+      font-size: 13px;
+      background: #F7F7F7;
+      color: #333;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ===================== SIDEBAR ===================== */
+    #sidebar {
+      width: 230px;
+      min-width: 230px;
+      background: #2A3F54;
+      color: #E7E7E7;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    #sidebar-logo {
+      padding: 18px 20px 14px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      border-bottom: 1px solid #1a2d3e;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #sidebar-logo span {
+      font-size: 22px;
+    }
+
+    .sidebar-section {
+      padding: 12px 0 4px;
+    }
+
+    .sidebar-section-title {
+      padding: 6px 20px;
+      font-size: 11px;
+      color: #8aa3b1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .sidebar-menu a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 20px;
+      color: #E7E7E7;
+      text-decoration: none;
+      font-size: 13px;
+      transition: background 0.15s;
+    }
+
+    .sidebar-menu a:hover,
+    .sidebar-menu a.active {
+      background: #1a2d3e;
+      color: #fff;
+    }
+
+    .sidebar-menu a .icon {
+      font-size: 15px;
+      width: 18px;
+      text-align: center;
+    }
+
+    .filter-block {
+      padding: 6px 16px 10px;
+    }
+
+    .filter-block label {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 4px;
+      cursor: pointer;
+      color: #c8d8e4;
+      font-size: 12.5px;
+      border-radius: 3px;
+      transition: background 0.12s;
+    }
+
+    .filter-block label:hover { background: #1e3347; }
+
+    .filter-block input[type="checkbox"] {
+      accent-color: #1ABB9C;
+      width: 14px; height: 14px;
+      cursor: pointer;
+    }
+
+    .filter-btn-row {
+      display: flex;
+      gap: 6px;
+      padding: 4px 20px 10px;
+    }
+
+    .filter-btn-row button {
+      flex: 1;
+      padding: 5px 4px;
+      font-size: 11px;
+      border: 1px solid #3d5a70;
+      background: transparent;
+      color: #8aa3b1;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all 0.15s;
+    }
+
+    .filter-btn-row button:hover {
+      background: #1ABB9C;
+      color: #fff;
+      border-color: #1ABB9C;
+    }
+
+    .difficulty-filter {
+      padding: 4px 16px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .diff-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 12.5px;
+      color: #c8d8e4;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+      user-select: none;
+    }
+
+    .diff-toggle:hover { background: #1e3347; }
+
+    .diff-toggle.active-beginner {
+      background: rgba(26,187,156,0.15);
+      border-color: #1ABB9C;
+      color: #1ABB9C;
+    }
+
+    .diff-toggle.active-advanced {
+      background: rgba(231,76,60,0.15);
+      border-color: #E74C3C;
+      color: #E74C3C;
+    }
+
+    .diff-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ===================== MAIN ===================== */
+    #main {
+      margin-left: 230px;
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    /* TOPBAR */
+    #topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+    }
+
+    #search-input {
+      flex: 1;
+      max-width: 360px;
+      padding: 7px 12px 7px 34px;
+      border: 1px solid #d5d5d5;
+      border-radius: 4px;
+      font-size: 13px;
+      outline: none;
+      background: #f9f9f9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23aaa' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat 10px center;
+      transition: border-color 0.15s;
+    }
+
+    #search-input:focus { border-color: #1ABB9C; background: #fff; }
+
+    #sort-select {
+      padding: 7px 10px;
+      border: 1px solid #d5d5d5;
+      border-radius: 4px;
+      font-size: 13px;
+      background: #fff;
+      color: #555;
+      cursor: pointer;
+      outline: none;
+    }
+
+    #sort-select:focus { border-color: #1ABB9C; }
+
+    .view-tabs {
+      margin-left: auto;
+      display: flex;
+      gap: 4px;
+    }
+
+    .view-tab {
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      border: 1px solid #d5d5d5;
+      background: #fff;
+      color: #777;
+      transition: all 0.15s;
+    }
+
+    .view-tab.active {
+      background: #2A3F54;
+      color: #fff;
+      border-color: #2A3F54;
+    }
+
+    /* STATS */
+    #stats-area {
+      padding: 16px 20px 4px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .stat-card {
+      background: #fff;
+      border-radius: 4px;
+      padding: 14px 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stat-card .stat-label {
+      font-size: 11.5px;
+      color: #888;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .stat-card .stat-value {
+      font-size: 26px;
+      font-weight: 700;
+      color: #2A3F54;
+      line-height: 1.1;
+    }
+
+    .stat-card .stat-sub {
+      font-size: 11px;
+      color: #aaa;
+    }
+
+    .stat-card .stat-icon {
+      font-size: 22px;
+      margin-bottom: 2px;
+    }
+
+    /* CONTENT AREA */
+    #content-area {
+      padding: 16px 20px 30px;
+    }
+
+    /* TABLE VIEW */
+    #table-view {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    #ski-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+
+    #ski-table thead tr {
+      background: #2A3F54;
+      color: #fff;
+    }
+
+    #ski-table thead th {
+      padding: 10px 10px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 12px;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+    }
+
+    #ski-table thead th:hover { background: #1e3347; }
+
+    #ski-table thead th .sort-icon {
+      margin-left: 4px;
+      opacity: 0.5;
+      font-size: 10px;
+    }
+
+    #ski-table thead th.sorted-asc .sort-icon::after { content: "▲"; opacity: 1; }
+    #ski-table thead th.sorted-desc .sort-icon::after { content: "▼"; opacity: 1; }
+    #ski-table thead th:not(.sorted-asc):not(.sorted-desc) .sort-icon::after { content: "⇅"; }
+
+    #ski-table tbody tr {
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.12s;
+    }
+
+    #ski-table tbody tr:hover { background: #f0f9f7; }
+
+    #ski-table tbody td {
+      padding: 8px 10px;
+      vertical-align: middle;
+    }
+
+    .resort-name {
+      font-weight: 600;
+      color: #2A3F54;
+    }
+
+    .region-badge {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      background: #e8f4f1;
+      color: #1ABB9C;
+    }
+
+    .region-badge.tohoku { background: #fef0f0; color: #e05555; }
+    .region-badge.kanto { background: #fff8e8; color: #d4900a; }
+
+    /* MINI BAR CHART */
+    .mini-bar {
+      display: flex;
+      height: 10px;
+      border-radius: 3px;
+      overflow: hidden;
+      min-width: 90px;
+      gap: 1px;
+    }
+
+    .mini-bar-seg {
+      height: 100%;
+    }
+
+    .mini-bar-label {
+      font-size: 10.5px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .url-link {
+      color: #1ABB9C;
+      text-decoration: none;
+      font-size: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .url-link:hover { color: #16a085; text-decoration: underline; }
+
+    #no-results {
+      padding: 40px;
+      text-align: center;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* CARD VIEW */
+    #card-view {
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    #card-view.active { display: grid; }
+    #table-view.active { display: block; }
+
+    .resort-card {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: box-shadow 0.15s;
+    }
+
+    .resort-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    .card-header {
+      background: #2A3F54;
+      color: #fff;
+      padding: 12px 14px 10px;
+    }
+
+    .card-header .card-name {
+      font-size: 13.5px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .card-header .card-region {
+      font-size: 11px;
+      color: #8aa3b1;
+    }
+
+    .card-body {
+      padding: 12px 14px;
+    }
+
+    .card-canvas-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .card-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 10px;
+      margin-bottom: 12px;
+    }
+
+    .card-stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .card-stat-label {
+      font-size: 10.5px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .card-stat-value {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2A3F54;
+    }
+
+    .card-stat-unit {
+      font-size: 10px;
+      color: #aaa;
+      font-weight: 400;
+    }
+
+    .card-legend {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10.5px;
+      color: #666;
+    }
+
+    .legend-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+    }
+
+    .card-link-btn {
+      display: block;
+      width: 100%;
+      padding: 7px;
+      background: #1ABB9C;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+
+    .card-link-btn:hover { background: #16a085; }
+
+    /* SCROLLBAR */
+    #sidebar::-webkit-scrollbar { width: 4px; }
+    #sidebar::-webkit-scrollbar-track { background: #1e3347; }
+    #sidebar::-webkit-scrollbar-thumb { background: #3d5a70; border-radius: 2px; }
+
+    @media (max-width: 1200px) {
+      #card-view.active { grid-template-columns: repeat(2, 1fr); }
+      #stats-area { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==================== SIDEBAR ==================== -->
+<nav id="sidebar">
+  <div id="sidebar-logo">
+    <span>&#9731;</span> Snow Finder
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">ナビゲーション</div>
+    <div class="sidebar-menu">
+      <a href="#" class="active"><span class="icon">&#9632;</span> 概要</a>
+      <a href="#"><span class="icon">&#9776;</span> スキー場一覧</a>
+      <a href="#"><span class="icon">&#9679;</span> 地図</a>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">地域フィルター</div>
+    <div class="filter-btn-row">
+      <button id="btn-select-all">全選択</button>
+      <button id="btn-deselect-all">全解除</button>
+    </div>
+    <div class="filter-block" id="region-filter">
+      <label><input type="checkbox" class="region-cb" value="北海道" checked> 北海道</label>
+      <label><input type="checkbox" class="region-cb" value="東北" checked> 東北</label>
+      <label><input type="checkbox" class="region-cb" value="甲信越" checked> 甲信越</label>
+      <label><input type="checkbox" class="region-cb" value="関東" checked> 関東</label>
+    </div>
+  </div>
+
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">難易度フィルター</div>
+    <div class="difficulty-filter">
+      <div class="diff-toggle" id="toggle-beginner" data-active="false">
+        <div class="diff-dot" style="background:#1ABB9C;"></div>
+        初級者向け（初級40%+）
+      </div>
+      <div class="diff-toggle" id="toggle-advanced" data-active="false">
+        <div class="diff-dot" style="background:#E74C3C;"></div>
+        上級者向け（上級30%+）
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== MAIN ==================== -->
+<div id="main">
+
+  <!-- TOPBAR -->
+  <div id="topbar">
+    <input type="text" id="search-input" placeholder="スキー場名を検索...">
+    <select id="sort-select">
+      <option value="">ソート: デフォルト</option>
+      <option value="courses_total">コース数</option>
+      <option value="lifts_total">リフト数</option>
+      <option value="max_elevation">標高</option>
+      <option value="longest_run">最長滑走距離</option>
+    </select>
+    <div class="view-tabs">
+      <button class="view-tab active" id="tab-table">&#9776; テーブル</button>
+      <button class="view-tab" id="tab-card">&#9632; カード</button>
+    </div>
+  </div>
+
+  <!-- STATS removed -->
+
+  <!-- CONTENT -->
+  <div id="content-area">
+
+    <!-- TABLE VIEW -->
+    <div id="table-view" class="active">
+      <table id="ski-table">
+        <thead>
+          <tr>
+            <th data-col="name">スキー場名<span class="sort-icon"></span></th>
+            <th data-col="region">地域<span class="sort-icon"></span></th>
+            <th data-col="courses_total">コース数<span class="sort-icon"></span></th>
+            <th data-col="difficulty">初中上(%)</th>
+            <th data-col="lifts_total">リフト数<span class="sort-icon"></span></th>
+            <th data-col="max_elevation">標高<span class="sort-icon"></span></th>
+            <th data-col="longest_run">最長距離<span class="sort-icon"></span></th>
+            <th>公式HP</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+      <div id="no-results" style="display:none;">条件に一致するスキー場が見つかりません</div>
+    </div>
+
+    <!-- CARD VIEW -->
+    <div id="card-view">
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ==================== DATA ====================
+const SKI_DATA = [
+  {"name":"ニセコグラン・ヒラフ","region":"北海道","prefecture":"北海道","courses_total":30,"beginner_pct":29,"intermediate_pct":40,"advanced_pct":31,"lifts_total":18,"max_elevation":1308,"longest_run":5600,"url":"https://www.grand-hirafu.jp","lat":42.84,"lon":140.70},
+  {"name":"ニセコビレッジ","region":"北海道","prefecture":"北海道","courses_total":27,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":12,"max_elevation":1308,"longest_run":4000,"url":"https://www.niseko-village.com","lat":42.82,"lon":140.69},
+  {"name":"ニセコアンヌプリ","region":"北海道","prefecture":"北海道","courses_total":18,"beginner_pct":28,"intermediate_pct":44,"advanced_pct":28,"lifts_total":9,"max_elevation":1308,"longest_run":4000,"url":"https://www.niseko-annupuri.com","lat":42.80,"lon":140.68},
+  {"name":"ルスツリゾート","region":"北海道","prefecture":"北海道","courses_total":37,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":18,"max_elevation":994,"longest_run":5800,"url":"https://rusutsu.com","lat":42.75,"lon":140.89},
+  {"name":"富良野スキー場","region":"北海道","prefecture":"北海道","courses_total":26,"beginner_pct":23,"intermediate_pct":46,"advanced_pct":31,"lifts_total":10,"max_elevation":1076,"longest_run":4000,"url":"https://www.princehotels.co.jp/ski/furano","lat":43.33,"lon":142.38},
+  {"name":"キロロリゾート","region":"北海道","prefecture":"北海道","courses_total":21,"beginner_pct":38,"intermediate_pct":43,"advanced_pct":19,"lifts_total":10,"max_elevation":1180,"longest_run":4700,"url":"https://www.kiroro.co.jp","lat":43.07,"lon":140.97},
+  {"name":"トマムスキー場","region":"北海道","prefecture":"北海道","courses_total":28,"beginner_pct":29,"intermediate_pct":50,"advanced_pct":21,"lifts_total":10,"max_elevation":1239,"longest_run":4200,"url":"https://www.snowtomamu.jp","lat":43.05,"lon":142.78},
+  {"name":"蔵王温泉スキー場","region":"東北","prefecture":"山形県","courses_total":43,"beginner_pct":28,"intermediate_pct":42,"advanced_pct":30,"lifts_total":41,"max_elevation":1661,"longest_run":10000,"url":"https://zaoskiing.com","lat":38.34,"lon":140.46},
+  {"name":"安比高原スキー場","region":"東北","prefecture":"岩手県","courses_total":24,"beginner_pct":29,"intermediate_pct":50,"advanced_pct":21,"lifts_total":16,"max_elevation":1304,"longest_run":8000,"url":"https://www.appi.co.jp","lat":40.00,"lon":141.00},
+  {"name":"田沢湖スキー場","region":"東北","prefecture":"秋田県","courses_total":17,"beginner_pct":35,"intermediate_pct":41,"advanced_pct":24,"lifts_total":9,"max_elevation":1637,"longest_run":4500,"url":"https://www.tazawako-ski.com","lat":39.67,"lon":140.71},
+  {"name":"白馬八方尾根スキー場","region":"甲信越","prefecture":"長野県","courses_total":13,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":23,"max_elevation":1831,"longest_run":8000,"url":"https://www.hakuba-happo.or.jp/","lat":36.69,"lon":137.87},
+  {"name":"白馬五竜＆Hakuba47","region":"甲信越","prefecture":"長野県","courses_total":29,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":20,"max_elevation":1676,"longest_run":5000,"url":"https://www.hakubagoryu.com/","lat":36.66,"lon":137.84},
+  {"name":"白馬岩岳スノーフィールド","region":"甲信越","prefecture":"長野県","courses_total":10,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":7,"max_elevation":1289,"longest_run":3500,"url":"https://iwatake-mountain-resort.com/","lat":36.70,"lon":137.83},
+  {"name":"栂池高原スキー場","region":"甲信越","prefecture":"長野県","courses_total":20,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":21,"max_elevation":1829,"longest_run":6000,"url":"https://www.tsugaike.co.jp/","lat":36.75,"lon":137.84},
+  {"name":"志賀高原スキー場","region":"甲信越","prefecture":"長野県","courses_total":80,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":59,"max_elevation":2307,"longest_run":10000,"url":"https://shigakogen-ski.com/","lat":36.72,"lon":138.50},
+  {"name":"野沢温泉スキー場","region":"甲信越","prefecture":"長野県","courses_total":36,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":18,"max_elevation":1650,"longest_run":10000,"url":"https://www.nozawaski.com/","lat":36.93,"lon":138.44},
+  {"name":"妙高杉ノ原スキー場","region":"甲信越","prefecture":"新潟県","courses_total":13,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":8,"max_elevation":1855,"longest_run":8500,"url":"https://www.suginosawara.com/","lat":36.89,"lon":138.10},
+  {"name":"苗場スキー場","region":"甲信越","prefecture":"新潟県","courses_total":28,"beginner_pct":36,"intermediate_pct":43,"advanced_pct":21,"lifts_total":22,"max_elevation":1789,"longest_run":4000,"url":"https://www.princehotels.co.jp/ski/naeba/","lat":36.83,"lon":138.69},
+  {"name":"かぐらスキー場","region":"甲信越","prefecture":"新潟県","courses_total":30,"beginner_pct":30,"intermediate_pct":50,"advanced_pct":20,"lifts_total":17,"max_elevation":1845,"longest_run":6000,"url":"https://www.princehotels.co.jp/ski/kagura/","lat":36.85,"lon":138.67},
+  {"name":"湯沢中里スノーリゾート","region":"甲信越","prefecture":"新潟県","courses_total":14,"beginner_pct":50,"intermediate_pct":36,"advanced_pct":14,"lifts_total":10,"max_elevation":1000,"longest_run":3500,"url":"https://nakazato.co.jp/","lat":36.91,"lon":138.79},
+  {"name":"GALA湯沢スキー場","region":"甲信越","prefecture":"新潟県","courses_total":19,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":9,"max_elevation":1181,"longest_run":2500,"url":"https://gala.co.jp/winter/","lat":36.92,"lon":138.88},
+  {"name":"石打丸山スキー場","region":"甲信越","prefecture":"新潟県","courses_total":22,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":17,"max_elevation":1112,"longest_run":4000,"url":"https://www.ishiuchi.or.jp/","lat":36.91,"lon":138.85},
+  {"name":"舞子スノーリゾート","region":"甲信越","prefecture":"新潟県","courses_total":22,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":13,"max_elevation":1147,"longest_run":4000,"url":"https://www.maiko-park.jp/","lat":36.89,"lon":138.84},
+  {"name":"上越国際スキー場","region":"甲信越","prefecture":"新潟県","courses_total":19,"beginner_pct":32,"intermediate_pct":42,"advanced_pct":26,"lifts_total":14,"max_elevation":1100,"longest_run":8500,"url":"https://www.jokokusai.co.jp/","lat":36.97,"lon":138.79},
+  {"name":"竜王スキーパーク","region":"甲信越","prefecture":"長野県","courses_total":15,"beginner_pct":27,"intermediate_pct":40,"advanced_pct":33,"lifts_total":7,"max_elevation":1770,"longest_run":6000,"url":"https://www.ryuoo.com/","lat":36.77,"lon":137.93},
+  {"name":"斑尾高原スキー場","region":"甲信越","prefecture":"長野県","courses_total":28,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":14,"max_elevation":1382,"longest_run":5000,"url":"https://www.madarao.jp/","lat":36.96,"lon":138.24},
+  {"name":"八甲田スキー場","region":"東北","prefecture":"青森県","courses_total":6,"beginner_pct":17,"intermediate_pct":50,"advanced_pct":33,"lifts_total":4,"max_elevation":1324,"longest_run":5000,"url":"https://www.hakkoda-ropeway.jp/","lat":40.65,"lon":140.88},
+  {"name":"蔵王ライザワールド","region":"東北","prefecture":"山形県","courses_total":11,"beginner_pct":27,"intermediate_pct":46,"advanced_pct":27,"lifts_total":7,"max_elevation":1661,"longest_run":4000,"url":"https://www.zao-raiza.jp/","lat":38.12,"lon":140.44},
+  {"name":"グランデコスノーリゾート","region":"東北","prefecture":"福島県","courses_total":10,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":4,"max_elevation":1590,"longest_run":4000,"url":"https://www.grandeco.com/","lat":37.72,"lon":139.99},
+  {"name":"丸沼高原スキー場","region":"関東","prefecture":"群馬県","courses_total":21,"beginner_pct":33,"intermediate_pct":43,"advanced_pct":24,"lifts_total":9,"max_elevation":2000,"longest_run":4000,"url":"https://www.marunuma.jp/","lat":36.85,"lon":139.20}
+];
+
+// ==================== STATE ====================
+let state = {
+  searchText: '',
+  selectedRegions: new Set(['北海道','東北','甲信越','関東']),
+  filterBeginner: false,
+  filterAdvanced: false,
+  sortCol: '',
+  sortDir: 1,
+  view: 'table',
+  donutCanvases: {}
+};
+
+// ==================== FILTER & SORT ====================
+function getFiltered() {
+  let result = SKI_DATA.filter(d => {
+    if (state.searchText && !d.name.includes(state.searchText)) return false;
+    if (!state.selectedRegions.has(d.region)) return false;
+    if (state.filterBeginner && d.beginner_pct < 40) return false;
+    if (state.filterAdvanced && d.advanced_pct < 30) return false;
+    return true;
+  });
+
+  if (state.sortCol) {
+    result = [...result].sort((a, b) => {
+      const va = a[state.sortCol];
+      const vb = b[state.sortCol];
+      if (typeof va === 'string') return state.sortDir * va.localeCompare(vb, 'ja');
+      return state.sortDir * (va - vb);
+    });
+  }
+
+  return result;
+}
+
+// ==================== STATS (removed) ====================
+function updateStats(data) {
+  // Stats cards removed per user request
+}
+
+// ==================== TABLE ====================
+function regionBadgeClass(region) {
+  if (region === '東北') return 'tohoku';
+  if (region === '関東') return 'kanto';
+  return '';
+}
+
+function renderTable(data) {
+  const tbody = document.getElementById('table-body');
+  const noResults = document.getElementById('no-results');
+
+  if (data.length === 0) {
+    tbody.innerHTML = '';
+    noResults.style.display = '';
+    return;
+  }
+  noResults.style.display = 'none';
+
+  tbody.innerHTML = data.map(d => {
+    const bc = regionBadgeClass(d.region);
+    return `
+      <tr>
+        <td class="resort-name">${escHtml(d.name)}</td>
+        <td><span class="region-badge ${bc}">${escHtml(d.region)}</span></td>
+        <td style="text-align:right;font-weight:600;">${d.courses_total}</td>
+        <td style="min-width:130px;">
+          <div class="mini-bar">
+            <div class="mini-bar-seg" style="width:${d.beginner_pct}%;background:#1ABB9C;" title="初級 ${d.beginner_pct}%"></div>
+            <div class="mini-bar-seg" style="width:${d.intermediate_pct}%;background:#F0AD4E;" title="中級 ${d.intermediate_pct}%"></div>
+            <div class="mini-bar-seg" style="width:${d.advanced_pct}%;background:#E74C3C;" title="上級 ${d.advanced_pct}%"></div>
+          </div>
+          <div class="mini-bar-label">
+            <span style="color:#1ABB9C;">${d.beginner_pct}%</span>
+            <span style="color:#888;"> / </span>
+            <span style="color:#F0AD4E;">${d.intermediate_pct}%</span>
+            <span style="color:#888;"> / </span>
+            <span style="color:#E74C3C;">${d.advanced_pct}%</span>
+          </div>
+        </td>
+        <td style="text-align:right;">${d.lifts_total}</td>
+        <td style="text-align:right;">${d.max_elevation.toLocaleString()} m</td>
+        <td style="text-align:right;">${(d.longest_run / 1000).toFixed(1)} km</td>
+        <td>
+          <a class="url-link" href="${escAttr(d.url)}" target="_blank" rel="noopener">
+            公式 &#8599;
+          </a>
+        </td>
+      </tr>
+    `;
+  }).join('');
+}
+
+// ==================== DONUT CHART ====================
+function drawDonut(canvas, bPct, iPct, aPct) {
+  const ctx = canvas.getContext('2d');
+  const size = canvas.width;
+  const cx = size / 2, cy = size / 2;
+  const r = size * 0.38;
+  const innerR = size * 0.22;
+  const colors = ['#1ABB9C', '#F0AD4E', '#E74C3C'];
+  const vals = [bPct, iPct, aPct];
+  const total = vals.reduce((a, b) => a + b, 0);
+
+  ctx.clearRect(0, 0, size, size);
+
+  let startAngle = -Math.PI / 2;
+  vals.forEach((v, i) => {
+    const angle = (v / total) * 2 * Math.PI;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, startAngle, startAngle + angle);
+    ctx.closePath();
+    ctx.fillStyle = colors[i];
+    ctx.fill();
+    startAngle += angle;
+  });
+
+  // Inner circle (donut hole)
+  ctx.beginPath();
+  ctx.arc(cx, cy, innerR, 0, 2 * Math.PI);
+  ctx.fillStyle = '#fff';
+  ctx.fill();
+
+  // Center text
+  ctx.fillStyle = '#2A3F54';
+  ctx.font = `bold ${Math.round(size * 0.16)}px Helvetica Neue, sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(String(bPct + iPct + aPct), cx, cy - size * 0.04);
+  ctx.font = `${Math.round(size * 0.1)}px Helvetica Neue, sans-serif`;
+  ctx.fillStyle = '#aaa';
+  ctx.fillText('%', cx, cy + size * 0.12);
+}
+
+// ==================== CARDS ====================
+function renderCards(data) {
+  const container = document.getElementById('card-view');
+
+  if (data.length === 0) {
+    container.innerHTML = '<p style="color:#aaa;padding:20px;">条件に一致するスキー場が見つかりません</p>';
+    return;
+  }
+
+  container.innerHTML = data.map((d, idx) => `
+    <div class="resort-card">
+      <div class="card-header">
+        <div class="card-name">${escHtml(d.name)}</div>
+        <div class="card-region">${escHtml(d.prefecture)}</div>
+      </div>
+      <div class="card-body">
+        <div class="card-canvas-wrap">
+          <canvas id="donut-${idx}" width="100" height="100"></canvas>
+        </div>
+        <div class="card-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#1ABB9C;"></div>初級 ${d.beginner_pct}%</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#F0AD4E;"></div>中級 ${d.intermediate_pct}%</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#E74C3C;"></div>上級 ${d.advanced_pct}%</div>
+        </div>
+        <div class="card-stats">
+          <div class="card-stat-item">
+            <div class="card-stat-label">コース数</div>
+            <div class="card-stat-value">${d.courses_total} <span class="card-stat-unit">本</span></div>
+          </div>
+          <div class="card-stat-item">
+            <div class="card-stat-label">リフト数</div>
+            <div class="card-stat-value">${d.lifts_total} <span class="card-stat-unit">基</span></div>
+          </div>
+          <div class="card-stat-item">
+            <div class="card-stat-label">標高</div>
+            <div class="card-stat-value">${d.max_elevation.toLocaleString()} <span class="card-stat-unit">m</span></div>
+          </div>
+          <div class="card-stat-item">
+            <div class="card-stat-label">最長距離</div>
+            <div class="card-stat-value">${(d.longest_run / 1000).toFixed(1)} <span class="card-stat-unit">km</span></div>
+          </div>
+        </div>
+        <a class="card-link-btn" href="${escAttr(d.url)}" target="_blank" rel="noopener">公式サイトへ &#8599;</a>
+      </div>
+    </div>
+  `).join('');
+
+  // Draw donuts after DOM insertion
+  data.forEach((d, idx) => {
+    const canvas = document.getElementById(`donut-${idx}`);
+    if (canvas) drawDonut(canvas, d.beginner_pct, d.intermediate_pct, d.advanced_pct);
+  });
+}
+
+// ==================== RENDER ====================
+function render() {
+  const filtered = getFiltered();
+  updateStats(filtered);
+
+  if (state.view === 'table') {
+    renderTable(filtered);
+  } else {
+    renderCards(filtered);
+  }
+}
+
+// ==================== SORT HEADERS ====================
+function setupSortHeaders() {
+  document.querySelectorAll('#ski-table thead th[data-col]').forEach(th => {
+    const col = th.dataset.col;
+    if (col === 'difficulty') return; // not sortable
+
+    th.addEventListener('click', () => {
+      if (state.sortCol === col) {
+        state.sortDir *= -1;
+        th.className = state.sortDir === 1 ? 'sorted-asc' : 'sorted-desc';
+      } else {
+        document.querySelectorAll('#ski-table thead th').forEach(t => t.className = '');
+        state.sortCol = col;
+        state.sortDir = -1;
+        th.className = 'sorted-desc';
+      }
+      // Sync select if applicable
+      const selectMap = {courses_total:'courses_total',lifts_total:'lifts_total',max_elevation:'max_elevation',longest_run:'longest_run'};
+      const sel = document.getElementById('sort-select');
+      sel.value = selectMap[col] || '';
+      render();
+    });
+  });
+}
+
+// ==================== UTILS ====================
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function escAttr(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;');
+}
+
+// ==================== EVENTS ====================
+document.getElementById('search-input').addEventListener('keyup', e => {
+  state.searchText = e.target.value.trim();
+  render();
+});
+
+document.getElementById('sort-select').addEventListener('change', e => {
+  state.sortCol = e.target.value;
+  state.sortDir = -1;
+  // Update header classes
+  document.querySelectorAll('#ski-table thead th').forEach(th => {
+    th.className = '';
+    if (th.dataset.col === state.sortCol) th.className = 'sorted-desc';
+  });
+  render();
+});
+
+document.querySelectorAll('.region-cb').forEach(cb => {
+  cb.addEventListener('change', () => {
+    if (cb.checked) state.selectedRegions.add(cb.value);
+    else state.selectedRegions.delete(cb.value);
+    render();
+  });
+});
+
+document.getElementById('btn-select-all').addEventListener('click', () => {
+  document.querySelectorAll('.region-cb').forEach(cb => {
+    cb.checked = true;
+    state.selectedRegions.add(cb.value);
+  });
+  render();
+});
+
+document.getElementById('btn-deselect-all').addEventListener('click', () => {
+  document.querySelectorAll('.region-cb').forEach(cb => {
+    cb.checked = false;
+  });
+  state.selectedRegions.clear();
+  render();
+});
+
+document.getElementById('toggle-beginner').addEventListener('click', function() {
+  state.filterBeginner = !state.filterBeginner;
+  this.dataset.active = String(state.filterBeginner);
+  this.classList.toggle('active-beginner', state.filterBeginner);
+  // Reset advanced if both would be active (optional: allow both)
+  render();
+});
+
+document.getElementById('toggle-advanced').addEventListener('click', function() {
+  state.filterAdvanced = !state.filterAdvanced;
+  this.dataset.active = String(state.filterAdvanced);
+  this.classList.toggle('active-advanced', state.filterAdvanced);
+  render();
+});
+
+// View tabs
+document.getElementById('tab-table').addEventListener('click', function() {
+  state.view = 'table';
+  this.classList.add('active');
+  document.getElementById('tab-card').classList.remove('active');
+  document.getElementById('table-view').classList.add('active');
+  document.getElementById('card-view').classList.remove('active');
+  render();
+});
+
+document.getElementById('tab-card').addEventListener('click', function() {
+  state.view = 'card';
+  this.classList.add('active');
+  document.getElementById('tab-table').classList.remove('active');
+  document.getElementById('card-view').classList.add('active');
+  document.getElementById('table-view').classList.remove('active');
+  render();
+});
+
+// ==================== INIT ====================
+setupSortHeaders();
+render();
+</script>
+</body>
+</html>
