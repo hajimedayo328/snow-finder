@@ -802,11 +802,22 @@ async function fetchAllWeather() {
 }
 
 // ==================== STATUS ====================
+function getStatus(resort) {
+  // スクレイピングデータにstatusがある場合
+  if (resort.status === 'open') return 'open';
+  if (resort.status === 'closed') return 'closed';
+  // season_endがある場合（手動設定データ）
+  if (resort.season_end) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const end = new Date(resort.season_end);
+    return today <= end ? 'open' : 'closed';
+  }
+  // どちらもない場合
+  return 'unknown';
+}
 function isOpen(resort) {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const end = new Date(resort.season_end);
-  return today <= end;
+  return getStatus(resort) === 'open';
 }
 
 // ==================== STATE ====================
@@ -888,7 +899,8 @@ function renderTable(data) {
     const open = isOpen(d);
     const statusHtml = open
       ? `<span style="color:#1ABB9C;font-weight:600;">営業中 ✓</span>`
-      : `<span style="color:#aaa;">終了</span>`;
+      : getStatus(d) === 'closed' ? `<span style="color:#aaa;">終了</span>`
+      : `<span style="color:#888;">― <a href="${escAttr(d.url || d.source_url || '#')}" target="_blank" style="color:#5B9BD5;font-size:11px;">確認</a></span>`;
     return `
       <tr>
         <td class="resort-name">${escHtml(d.name)}</td>
@@ -978,7 +990,8 @@ function renderCards(data) {
     const open = isOpen(d);
     const badgeHtml = open
       ? `<span class="card-status-badge open">営業中</span>`
-      : `<span class="card-status-badge closed">終了</span>`;
+      : getStatus(d) === 'closed' ? `<span class="card-status-badge closed">終了</span>`
+      : `<span class="card-status-badge" style="background:#888;">不明</span>`;
     return `
     <div class="resort-card">
       <div class="card-header">
