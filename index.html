@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snow Finder - 全国スキー場比較ダッシュボード</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -290,6 +292,7 @@
 
     /* TABLE VIEW */
     #table-view {
+      display: none;
       background: #fff;
       border-radius: 4px;
       box-shadow: 0 1px 2px rgba(0,0,0,0.1);
@@ -398,6 +401,33 @@
       font-size: 14px;
     }
 
+    /* 天気セル */
+    .weather-cell {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .weather-day {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 10px;
+      color: #888;
+      min-width: 30px;
+    }
+
+    .weather-icon {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .weather-temp {
+      font-size: 9px;
+      color: #999;
+      white-space: nowrap;
+    }
+
     /* CARD VIEW */
     #card-view {
       display: none;
@@ -407,6 +437,21 @@
 
     #card-view.active { display: grid; }
     #table-view.active { display: block; }
+    #map-view { display: none; }
+    #map-view.active { display: block; }
+    #leaflet-map { width: 100%; height: calc(100vh - 120px); border-radius: 4px; }
+    .map-label {
+      background: rgba(255,255,255,0.9) !important;
+      border: 1px solid #ccc !important;
+      border-radius: 3px !important;
+      padding: 1px 6px !important;
+      font-size: 11px !important;
+      font-weight: bold !important;
+      color: #2A3F54 !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
+      white-space: nowrap !important;
+    }
+    .map-label::before { display: none !important; }
 
     .resort-card {
       background: #fff;
@@ -424,6 +469,9 @@
       background: #2A3F54;
       color: #fff;
       padding: 12px 14px 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
     }
 
     .card-header .card-name {
@@ -435,6 +483,27 @@
     .card-header .card-region {
       font-size: 11px;
       color: #8aa3b1;
+    }
+
+    .card-status-badge {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-left: 6px;
+      margin-top: 1px;
+    }
+
+    .card-status-badge.open {
+      background: rgba(26,187,156,0.25);
+      color: #1ABB9C;
+    }
+
+    .card-status-badge.closed {
+      background: rgba(180,180,180,0.2);
+      color: #aaa;
     }
 
     .card-body {
@@ -537,9 +606,9 @@
   <div class="sidebar-section">
     <div class="sidebar-section-title">ナビゲーション</div>
     <div class="sidebar-menu">
-      <a href="#" class="active"><span class="icon">&#9632;</span> 概要</a>
-      <a href="#"><span class="icon">&#9776;</span> スキー場一覧</a>
-      <a href="#"><span class="icon">&#9679;</span> 地図</a>
+      <a href="#" id="nav-table" class="active"><span class="icon">&#9776;</span> スキー場一覧</a>
+      <a href="#" id="nav-card"><span class="icon">&#9632;</span> カード</a>
+      <a href="#" id="nav-map"><span class="icon">&#9679;</span> 地図</a>
     </div>
   </div>
 
@@ -554,6 +623,9 @@
       <label><input type="checkbox" class="region-cb" value="東北" checked> 東北</label>
       <label><input type="checkbox" class="region-cb" value="甲信越" checked> 甲信越</label>
       <label><input type="checkbox" class="region-cb" value="関東" checked> 関東</label>
+      <label><input type="checkbox" class="region-cb" value="中部" checked> 中部</label>
+      <label><input type="checkbox" class="region-cb" value="関西" checked> 関西</label>
+      <label><input type="checkbox" class="region-cb" value="中国" checked> 中国</label>
     </div>
   </div>
 
@@ -584,14 +656,14 @@
       <option value="lifts_total">リフト数</option>
       <option value="max_elevation">標高</option>
       <option value="longest_run">最長滑走距離</option>
+      <option value="status">営業中優先</option>
     </select>
     <div class="view-tabs">
       <button class="view-tab active" id="tab-table">&#9776; テーブル</button>
       <button class="view-tab" id="tab-card">&#9632; カード</button>
+      <button class="view-tab" id="tab-map">&#9679; 地図</button>
     </div>
   </div>
-
-  <!-- STATS removed -->
 
   <!-- CONTENT -->
   <div id="content-area">
@@ -603,6 +675,8 @@
           <tr>
             <th data-col="name">スキー場名<span class="sort-icon"></span></th>
             <th data-col="region">地域<span class="sort-icon"></span></th>
+            <th data-col="status">状態<span class="sort-icon"></span></th>
+            <th>天気(3日)</th>
             <th data-col="courses_total">コース数<span class="sort-icon"></span></th>
             <th data-col="difficulty">初中上(%)</th>
             <th data-col="lifts_total">リフト数<span class="sort-icon"></span></th>
@@ -621,48 +695,123 @@
     <div id="card-view">
     </div>
 
+    <!-- MAP VIEW -->
+    <div id="map-view">
+      <div id="leaflet-map"></div>
+    </div>
+
   </div>
 </div>
 
 <script>
 // ==================== DATA ====================
 const SKI_DATA = [
-  {"name":"ニセコグラン・ヒラフ","region":"北海道","prefecture":"北海道","courses_total":30,"beginner_pct":29,"intermediate_pct":40,"advanced_pct":31,"lifts_total":18,"max_elevation":1308,"longest_run":5600,"url":"https://www.grand-hirafu.jp","lat":42.84,"lon":140.70},
-  {"name":"ニセコビレッジ","region":"北海道","prefecture":"北海道","courses_total":27,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":12,"max_elevation":1308,"longest_run":4000,"url":"https://www.niseko-village.com","lat":42.82,"lon":140.69},
-  {"name":"ニセコアンヌプリ","region":"北海道","prefecture":"北海道","courses_total":18,"beginner_pct":28,"intermediate_pct":44,"advanced_pct":28,"lifts_total":9,"max_elevation":1308,"longest_run":4000,"url":"https://www.niseko-annupuri.com","lat":42.80,"lon":140.68},
-  {"name":"ルスツリゾート","region":"北海道","prefecture":"北海道","courses_total":37,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":18,"max_elevation":994,"longest_run":5800,"url":"https://rusutsu.com","lat":42.75,"lon":140.89},
-  {"name":"富良野スキー場","region":"北海道","prefecture":"北海道","courses_total":26,"beginner_pct":23,"intermediate_pct":46,"advanced_pct":31,"lifts_total":10,"max_elevation":1076,"longest_run":4000,"url":"https://www.princehotels.co.jp/ski/furano","lat":43.33,"lon":142.38},
-  {"name":"キロロリゾート","region":"北海道","prefecture":"北海道","courses_total":21,"beginner_pct":38,"intermediate_pct":43,"advanced_pct":19,"lifts_total":10,"max_elevation":1180,"longest_run":4700,"url":"https://www.kiroro.co.jp","lat":43.07,"lon":140.97},
-  {"name":"トマムスキー場","region":"北海道","prefecture":"北海道","courses_total":28,"beginner_pct":29,"intermediate_pct":50,"advanced_pct":21,"lifts_total":10,"max_elevation":1239,"longest_run":4200,"url":"https://www.snowtomamu.jp","lat":43.05,"lon":142.78},
-  {"name":"蔵王温泉スキー場","region":"東北","prefecture":"山形県","courses_total":43,"beginner_pct":28,"intermediate_pct":42,"advanced_pct":30,"lifts_total":41,"max_elevation":1661,"longest_run":10000,"url":"https://zaoskiing.com","lat":38.34,"lon":140.46},
-  {"name":"安比高原スキー場","region":"東北","prefecture":"岩手県","courses_total":24,"beginner_pct":29,"intermediate_pct":50,"advanced_pct":21,"lifts_total":16,"max_elevation":1304,"longest_run":8000,"url":"https://www.appi.co.jp","lat":40.00,"lon":141.00},
-  {"name":"田沢湖スキー場","region":"東北","prefecture":"秋田県","courses_total":17,"beginner_pct":35,"intermediate_pct":41,"advanced_pct":24,"lifts_total":9,"max_elevation":1637,"longest_run":4500,"url":"https://www.tazawako-ski.com","lat":39.67,"lon":140.71},
-  {"name":"白馬八方尾根スキー場","region":"甲信越","prefecture":"長野県","courses_total":13,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":23,"max_elevation":1831,"longest_run":8000,"url":"https://www.hakuba-happo.or.jp/","lat":36.69,"lon":137.87},
-  {"name":"白馬五竜＆Hakuba47","region":"甲信越","prefecture":"長野県","courses_total":29,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":20,"max_elevation":1676,"longest_run":5000,"url":"https://www.hakubagoryu.com/","lat":36.66,"lon":137.84},
-  {"name":"白馬岩岳スノーフィールド","region":"甲信越","prefecture":"長野県","courses_total":10,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":7,"max_elevation":1289,"longest_run":3500,"url":"https://iwatake-mountain-resort.com/","lat":36.70,"lon":137.83},
-  {"name":"栂池高原スキー場","region":"甲信越","prefecture":"長野県","courses_total":20,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":21,"max_elevation":1829,"longest_run":6000,"url":"https://www.tsugaike.co.jp/","lat":36.75,"lon":137.84},
-  {"name":"志賀高原スキー場","region":"甲信越","prefecture":"長野県","courses_total":80,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":59,"max_elevation":2307,"longest_run":10000,"url":"https://shigakogen-ski.com/","lat":36.72,"lon":138.50},
-  {"name":"野沢温泉スキー場","region":"甲信越","prefecture":"長野県","courses_total":36,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":18,"max_elevation":1650,"longest_run":10000,"url":"https://www.nozawaski.com/","lat":36.93,"lon":138.44},
-  {"name":"妙高杉ノ原スキー場","region":"甲信越","prefecture":"新潟県","courses_total":13,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":8,"max_elevation":1855,"longest_run":8500,"url":"https://www.suginosawara.com/","lat":36.89,"lon":138.10},
-  {"name":"苗場スキー場","region":"甲信越","prefecture":"新潟県","courses_total":28,"beginner_pct":36,"intermediate_pct":43,"advanced_pct":21,"lifts_total":22,"max_elevation":1789,"longest_run":4000,"url":"https://www.princehotels.co.jp/ski/naeba/","lat":36.83,"lon":138.69},
-  {"name":"かぐらスキー場","region":"甲信越","prefecture":"新潟県","courses_total":30,"beginner_pct":30,"intermediate_pct":50,"advanced_pct":20,"lifts_total":17,"max_elevation":1845,"longest_run":6000,"url":"https://www.princehotels.co.jp/ski/kagura/","lat":36.85,"lon":138.67},
-  {"name":"湯沢中里スノーリゾート","region":"甲信越","prefecture":"新潟県","courses_total":14,"beginner_pct":50,"intermediate_pct":36,"advanced_pct":14,"lifts_total":10,"max_elevation":1000,"longest_run":3500,"url":"https://nakazato.co.jp/","lat":36.91,"lon":138.79},
-  {"name":"GALA湯沢スキー場","region":"甲信越","prefecture":"新潟県","courses_total":19,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":9,"max_elevation":1181,"longest_run":2500,"url":"https://gala.co.jp/winter/","lat":36.92,"lon":138.88},
-  {"name":"石打丸山スキー場","region":"甲信越","prefecture":"新潟県","courses_total":22,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":17,"max_elevation":1112,"longest_run":4000,"url":"https://www.ishiuchi.or.jp/","lat":36.91,"lon":138.85},
-  {"name":"舞子スノーリゾート","region":"甲信越","prefecture":"新潟県","courses_total":22,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":13,"max_elevation":1147,"longest_run":4000,"url":"https://www.maiko-park.jp/","lat":36.89,"lon":138.84},
-  {"name":"上越国際スキー場","region":"甲信越","prefecture":"新潟県","courses_total":19,"beginner_pct":32,"intermediate_pct":42,"advanced_pct":26,"lifts_total":14,"max_elevation":1100,"longest_run":8500,"url":"https://www.jokokusai.co.jp/","lat":36.97,"lon":138.79},
-  {"name":"竜王スキーパーク","region":"甲信越","prefecture":"長野県","courses_total":15,"beginner_pct":27,"intermediate_pct":40,"advanced_pct":33,"lifts_total":7,"max_elevation":1770,"longest_run":6000,"url":"https://www.ryuoo.com/","lat":36.77,"lon":137.93},
-  {"name":"斑尾高原スキー場","region":"甲信越","prefecture":"長野県","courses_total":28,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":14,"max_elevation":1382,"longest_run":5000,"url":"https://www.madarao.jp/","lat":36.96,"lon":138.24},
-  {"name":"八甲田スキー場","region":"東北","prefecture":"青森県","courses_total":6,"beginner_pct":17,"intermediate_pct":50,"advanced_pct":33,"lifts_total":4,"max_elevation":1324,"longest_run":5000,"url":"https://www.hakkoda-ropeway.jp/","lat":40.65,"lon":140.88},
-  {"name":"蔵王ライザワールド","region":"東北","prefecture":"山形県","courses_total":11,"beginner_pct":27,"intermediate_pct":46,"advanced_pct":27,"lifts_total":7,"max_elevation":1661,"longest_run":4000,"url":"https://www.zao-raiza.jp/","lat":38.12,"lon":140.44},
-  {"name":"グランデコスノーリゾート","region":"東北","prefecture":"福島県","courses_total":10,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":4,"max_elevation":1590,"longest_run":4000,"url":"https://www.grandeco.com/","lat":37.72,"lon":139.99},
-  {"name":"丸沼高原スキー場","region":"関東","prefecture":"群馬県","courses_total":21,"beginner_pct":33,"intermediate_pct":43,"advanced_pct":24,"lifts_total":9,"max_elevation":2000,"longest_run":4000,"url":"https://www.marunuma.jp/","lat":36.85,"lon":139.20}
+  {"name":"ニセコグラン・ヒラフ","region":"北海道","prefecture":"北海道","courses_total":30,"beginner_pct":29,"intermediate_pct":40,"advanced_pct":31,"lifts_total":18,"max_elevation":1308,"longest_run":5600,"url":"https://www.grand-hirafu.jp","lat":42.84,"lon":140.70,"season_end":"2026-03-30"},
+  {"name":"ニセコビレッジ","region":"北海道","prefecture":"北海道","courses_total":27,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":12,"max_elevation":1308,"longest_run":4000,"url":"https://www.niseko-village.com","lat":42.82,"lon":140.69,"season_end":"2026-03-30"},
+  {"name":"ニセコアンヌプリ","region":"北海道","prefecture":"北海道","courses_total":18,"beginner_pct":28,"intermediate_pct":44,"advanced_pct":28,"lifts_total":9,"max_elevation":1308,"longest_run":4000,"url":"https://www.niseko-annupuri.com","lat":42.80,"lon":140.68,"season_end":"2026-03-30"},
+  {"name":"ルスツリゾート","region":"北海道","prefecture":"北海道","courses_total":37,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":18,"max_elevation":994,"longest_run":5800,"url":"https://rusutsu.com","lat":42.75,"lon":140.89,"season_end":"2026-04-06"},
+  {"name":"富良野スキー場","region":"北海道","prefecture":"北海道","courses_total":26,"beginner_pct":23,"intermediate_pct":46,"advanced_pct":31,"lifts_total":10,"max_elevation":1076,"longest_run":4000,"url":"https://www.princehotels.co.jp/ski/furano","lat":43.33,"lon":142.38,"season_end":"2026-04-06"},
+  {"name":"キロロリゾート","region":"北海道","prefecture":"北海道","courses_total":21,"beginner_pct":38,"intermediate_pct":43,"advanced_pct":19,"lifts_total":10,"max_elevation":1180,"longest_run":4700,"url":"https://www.kiroro.co.jp","lat":43.07,"lon":140.97,"season_end":"2026-03-30"},
+  {"name":"トマムスキー場","region":"北海道","prefecture":"北海道","courses_total":28,"beginner_pct":29,"intermediate_pct":50,"advanced_pct":21,"lifts_total":10,"max_elevation":1239,"longest_run":4200,"url":"https://www.snowtomamu.jp","lat":43.05,"lon":142.78,"season_end":"2026-04-06"},
+  {"name":"蔵王温泉スキー場","region":"東北","prefecture":"山形県","courses_total":43,"beginner_pct":28,"intermediate_pct":42,"advanced_pct":30,"lifts_total":41,"max_elevation":1661,"longest_run":10000,"url":"https://zaoskiing.com","lat":38.34,"lon":140.46,"season_end":"2026-04-06"},
+  {"name":"安比高原スキー場","region":"東北","prefecture":"岩手県","courses_total":24,"beginner_pct":29,"intermediate_pct":50,"advanced_pct":21,"lifts_total":16,"max_elevation":1304,"longest_run":8000,"url":"https://www.appi.co.jp","lat":40.00,"lon":141.00,"season_end":"2026-03-30"},
+  {"name":"田沢湖スキー場","region":"東北","prefecture":"秋田県","courses_total":17,"beginner_pct":35,"intermediate_pct":41,"advanced_pct":24,"lifts_total":9,"max_elevation":1637,"longest_run":4500,"url":"https://www.tazawako-ski.com","lat":39.67,"lon":140.71,"season_end":"2026-03-30"},
+  {"name":"白馬八方尾根スキー場","region":"甲信越","prefecture":"長野県","courses_total":13,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":23,"max_elevation":1831,"longest_run":8000,"url":"https://www.hakuba-happo.or.jp/","lat":36.69,"lon":137.87,"season_end":"2026-05-06"},
+  {"name":"白馬五竜＆Hakuba47","region":"甲信越","prefecture":"長野県","courses_total":29,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":20,"max_elevation":1676,"longest_run":5000,"url":"https://www.hakubagoryu.com/","lat":36.66,"lon":137.84,"season_end":"2026-04-06"},
+  {"name":"白馬岩岳スノーフィールド","region":"甲信越","prefecture":"長野県","courses_total":10,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":7,"max_elevation":1289,"longest_run":3500,"url":"https://iwatake-mountain-resort.com/","lat":36.70,"lon":137.83,"season_end":"2026-03-30"},
+  {"name":"栂池高原スキー場","region":"甲信越","prefecture":"長野県","courses_total":20,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":21,"max_elevation":1829,"longest_run":6000,"url":"https://www.tsugaike.co.jp/","lat":36.75,"lon":137.84,"season_end":"2026-04-06"},
+  {"name":"志賀高原スキー場","region":"甲信越","prefecture":"長野県","courses_total":80,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":59,"max_elevation":2307,"longest_run":10000,"url":"https://shigakogen-ski.com/","lat":36.72,"lon":138.50,"season_end":"2026-05-10"},
+  {"name":"野沢温泉スキー場","region":"甲信越","prefecture":"長野県","courses_total":36,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":18,"max_elevation":1650,"longest_run":10000,"url":"https://www.nozawaski.com/","lat":36.93,"lon":138.44,"season_end":"2026-05-06"},
+  {"name":"妙高杉ノ原スキー場","region":"甲信越","prefecture":"新潟県","courses_total":13,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":8,"max_elevation":1855,"longest_run":8500,"url":"https://www.suginosawara.com/","lat":36.89,"lon":138.10,"season_end":"2026-04-06"},
+  {"name":"苗場スキー場","region":"甲信越","prefecture":"新潟県","courses_total":28,"beginner_pct":36,"intermediate_pct":43,"advanced_pct":21,"lifts_total":22,"max_elevation":1789,"longest_run":4000,"url":"https://www.princehotels.co.jp/ski/naeba/","lat":36.83,"lon":138.69,"season_end":"2026-04-06"},
+  {"name":"かぐらスキー場","region":"甲信越","prefecture":"新潟県","courses_total":30,"beginner_pct":30,"intermediate_pct":50,"advanced_pct":20,"lifts_total":17,"max_elevation":1845,"longest_run":6000,"url":"https://www.princehotels.co.jp/ski/kagura/","lat":36.85,"lon":138.67,"season_end":"2026-05-24"},
+  {"name":"湯沢中里スノーリゾート","region":"甲信越","prefecture":"新潟県","courses_total":14,"beginner_pct":50,"intermediate_pct":36,"advanced_pct":14,"lifts_total":10,"max_elevation":1000,"longest_run":3500,"url":"https://nakazato.co.jp/","lat":36.91,"lon":138.79,"season_end":"2026-03-30"},
+  {"name":"GALA湯沢スキー場","region":"甲信越","prefecture":"新潟県","courses_total":19,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":9,"max_elevation":1181,"longest_run":2500,"url":"https://gala.co.jp/winter/","lat":36.92,"lon":138.88,"season_end":"2026-05-06"},
+  {"name":"石打丸山スキー場","region":"甲信越","prefecture":"新潟県","courses_total":22,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":17,"max_elevation":1112,"longest_run":4000,"url":"https://www.ishiuchi.or.jp/","lat":36.91,"lon":138.85,"season_end":"2026-04-06"},
+  {"name":"舞子スノーリゾート","region":"甲信越","prefecture":"新潟県","courses_total":22,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":13,"max_elevation":1147,"longest_run":4000,"url":"https://www.maiko-park.jp/","lat":36.89,"lon":138.84,"season_end":"2026-04-06"},
+  {"name":"上越国際スキー場","region":"甲信越","prefecture":"新潟県","courses_total":19,"beginner_pct":32,"intermediate_pct":42,"advanced_pct":26,"lifts_total":14,"max_elevation":1100,"longest_run":8500,"url":"https://www.jokokusai.co.jp/","lat":36.97,"lon":138.79,"season_end":"2026-04-06"},
+  {"name":"竜王スキーパーク","region":"甲信越","prefecture":"長野県","courses_total":15,"beginner_pct":27,"intermediate_pct":40,"advanced_pct":33,"lifts_total":7,"max_elevation":1770,"longest_run":6000,"url":"https://www.ryuoo.com/","lat":36.77,"lon":137.93,"season_end":"2026-04-06"},
+  {"name":"斑尾高原スキー場","region":"甲信越","prefecture":"長野県","courses_total":28,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":14,"max_elevation":1382,"longest_run":5000,"url":"https://www.madarao.jp/","lat":36.96,"lon":138.24,"season_end":"2026-04-06"},
+  {"name":"八甲田スキー場","region":"東北","prefecture":"青森県","courses_total":6,"beginner_pct":17,"intermediate_pct":50,"advanced_pct":33,"lifts_total":4,"max_elevation":1324,"longest_run":5000,"url":"https://www.hakkoda-ropeway.jp/","lat":40.65,"lon":140.88,"season_end":"2026-05-06"},
+  {"name":"蔵王ライザワールド","region":"東北","prefecture":"山形県","courses_total":11,"beginner_pct":27,"intermediate_pct":46,"advanced_pct":27,"lifts_total":7,"max_elevation":1661,"longest_run":4000,"url":"https://www.zao-raiza.jp/","lat":38.12,"lon":140.44,"season_end":"2026-04-06"},
+  {"name":"グランデコスノーリゾート","region":"東北","prefecture":"福島県","courses_total":10,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":4,"max_elevation":1590,"longest_run":4000,"url":"https://www.grandeco.com/","lat":37.72,"lon":139.99,"season_end":"2026-03-30"},
+  {"name":"丸沼高原スキー場","region":"関東","prefecture":"群馬県","courses_total":21,"beginner_pct":33,"intermediate_pct":43,"advanced_pct":24,"lifts_total":9,"max_elevation":2000,"longest_run":4000,"url":"https://www.marunuma.jp/","lat":36.85,"lon":139.20,"season_end":"2026-05-06"},
+  {"name":"月山スキー場","region":"東北","prefecture":"山形県","courses_total":10,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":3,"max_elevation":1984,"longest_run":4000,"url":"https://gassan-ski.jp","lat":38.55,"lon":139.98,"season_end":"2026-06-07"},
+  {"name":"乗鞍高原スキー場","region":"中部","prefecture":"長野県","courses_total":9,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":5,"max_elevation":1800,"longest_run":3500,"url":"https://norikura.gr.jp","lat":36.10,"lon":137.57,"season_end":"2026-04-05"},
+  {"name":"六甲山スノーパーク","region":"関西","prefecture":"兵庫県","courses_total":4,"beginner_pct":50,"intermediate_pct":30,"advanced_pct":20,"lifts_total":4,"max_elevation":880,"longest_run":800,"url":"https://www.rokkosan.com/ski/","lat":34.75,"lon":135.25,"season_end":"2026-02-28"},
+  {"name":"鷲ヶ岳スキー場","region":"中部","prefecture":"岐阜県","courses_total":11,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":8,"max_elevation":1550,"longest_run":3500,"url":"https://www.washigadake.com","lat":35.98,"lon":136.85,"season_end":"2026-03-29"},
+  {"name":"ハチ高原スキー場","region":"関西","prefecture":"兵庫県","courses_total":14,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":9,"max_elevation":1221,"longest_run":2800,"url":"https://www.hachi-ski.com","lat":35.44,"lon":134.58,"season_end":"2026-03-22"},
+  {"name":"おじろスキー場","region":"関西","prefecture":"兵庫県","courses_total":10,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":6,"max_elevation":1085,"longest_run":2500,"url":"https://www.ojiro-ski.com","lat":35.39,"lon":134.62,"season_end":"2026-03-15"},
+  {"name":"大山スキー場","region":"中国","prefecture":"鳥取県","courses_total":17,"beginner_pct":35,"intermediate_pct":45,"advanced_pct":20,"lifts_total":10,"max_elevation":1350,"longest_run":3500,"url":"https://www.daisen.jp/ski/","lat":35.38,"lon":133.55,"season_end":"2026-03-29"},
+  {"name":"恐羅漢スノーパーク","region":"中国","prefecture":"広島県","courses_total":12,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":7,"max_elevation":1346,"longest_run":4000,"url":"https://www.osorakan.co.jp","lat":34.68,"lon":131.90,"season_end":"2026-03-22"},
+  {"name":"菅平高原スノーリゾート","region":"甲信越","prefecture":"長野県","courses_total":23,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":19,"max_elevation":2000,"longest_run":4000,"url":"https://sugadaira.com","lat":36.53,"lon":138.32,"season_end":"2026-03-29"},
+  {"name":"車山高原SKYPARKスキー場","region":"甲信越","prefecture":"長野県","courses_total":9,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":6,"max_elevation":1925,"longest_run":2500,"url":"https://www.kurumayama.com","lat":36.10,"lon":138.22,"season_end":"2026-03-22"},
+  {"name":"めいほうスキー場","region":"中部","prefecture":"岐阜県","courses_total":16,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":9,"max_elevation":1600,"longest_run":4000,"url":"https://www.meiho.co.jp","lat":36.08,"lon":137.00,"season_end":"2026-03-22"},
+  {"name":"奥美濃高鷲スノーパーク","region":"中部","prefecture":"岐阜県","courses_total":19,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":11,"max_elevation":1550,"longest_run":4200,"url":"https://www.takasu.co.jp","lat":35.98,"lon":136.92,"season_end":"2026-03-29"},
+  {"name":"たんばらスキーパーク","region":"関東","prefecture":"群馬県","courses_total":9,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":6,"max_elevation":1900,"longest_run":2500,"url":"https://www.tambara.co.jp","lat":36.72,"lon":139.01,"season_end":"2026-04-05"},
+  {"name":"水上高原スキーリゾート","region":"関東","prefecture":"群馬県","courses_total":13,"beginner_pct":35,"intermediate_pct":40,"advanced_pct":25,"lifts_total":8,"max_elevation":1831,"longest_run":3500,"url":"https://www.minakamikogen.jp","lat":36.85,"lon":138.85,"season_end":"2026-03-29"},
+  {"name":"天元台高原スキー場","region":"東北","prefecture":"山形県","courses_total":13,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":5,"max_elevation":1820,"longest_run":4500,"url":"https://www.tenzandai.com","lat":37.88,"lon":140.03,"season_end":"2026-04-06"},
+  {"name":"ひるがの高原スキー場","region":"中部","prefecture":"岐阜県","courses_total":10,"beginner_pct":40,"intermediate_pct":40,"advanced_pct":20,"lifts_total":7,"max_elevation":1570,"longest_run":2800,"url":"https://www.hirugano.jp","lat":35.88,"lon":136.88,"season_end":"2026-03-22"},
+  {"name":"アサマ2000パーク","region":"甲信越","prefecture":"長野県","courses_total":8,"beginner_pct":30,"intermediate_pct":50,"advanced_pct":20,"lifts_total":5,"max_elevation":2000,"longest_run":3000,"url":"https://www.asama2000.com","lat":36.40,"lon":138.52,"season_end":"2026-04-06"},
+  {"name":"サッポロテイネ","region":"北海道","prefecture":"北海道","courses_total":17,"beginner_pct":30,"intermediate_pct":45,"advanced_pct":25,"lifts_total":9,"max_elevation":1024,"longest_run":4000,"url":"https://sapporo-teine.com","lat":43.12,"lon":141.22,"season_end":"2026-03-22"},
+  {"name":"岩手高原スノーパーク","region":"東北","prefecture":"岩手県","courses_total":12,"beginner_pct":35,"intermediate_pct":45,"advanced_pct":20,"lifts_total":7,"max_elevation":1040,"longest_run":3000,"url":"https://www.iwatekogen.co.jp","lat":39.82,"lon":141.08,"season_end":"2026-03-29"}
 ];
+
+// ==================== WEATHER ====================
+let weatherCache = {};
+
+function weatherCodeToIcon(code) {
+  if ([0, 1].includes(code)) return '☀️';
+  if ([2, 3].includes(code)) return '⛅';
+  if ([45, 48].includes(code)) return '🌫️';
+  if ([51,53,55,61,63,65,80,81,82].includes(code)) return '🌧️';
+  if ([71,73,75,77,85,86].includes(code)) return '🌨️';
+  if ([95,96,99].includes(code)) return '⚡';
+  return '?';
+}
+
+async function fetchWeatherForResort(resort) {
+  const url = `https://api.open-meteo.com/v1/forecast?latitude=${resort.lat}&longitude=${resort.lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia/Tokyo&forecast_days=3`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const json = await res.json();
+  const days = json.daily.weathercode.map((code, i) => ({
+    icon: weatherCodeToIcon(code),
+    maxTemp: Math.round(json.daily.temperature_2m_max[i]),
+    minTemp: Math.round(json.daily.temperature_2m_min[i]),
+  }));
+  return { name: resort.name, days };
+}
+
+async function fetchAllWeather() {
+  const CONCURRENCY = 5;
+  const results = [];
+  for (let i = 0; i < SKI_DATA.length; i += CONCURRENCY) {
+    const batch = SKI_DATA.slice(i, i + CONCURRENCY);
+    const batchResults = await Promise.allSettled(batch.map(r => fetchWeatherForResort(r)));
+    batchResults.forEach((result, idx) => {
+      if (result.status === 'fulfilled') {
+        const d = result.value;
+        weatherCache[d.name] = { days: d.days };
+      }
+    });
+    // テーブル/カードが表示中なら再描画
+    render();
+  }
+}
+
+// ==================== STATUS ====================
+function isOpen(resort) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const end = new Date(resort.season_end);
+  return today <= end;
+}
 
 // ==================== STATE ====================
 let state = {
   searchText: '',
-  selectedRegions: new Set(['北海道','東北','甲信越','関東']),
+  selectedRegions: new Set(['北海道','東北','甲信越','関東','中部','関西','中国']),
   filterBeginner: false,
   filterAdvanced: false,
   sortCol: '',
@@ -681,7 +830,13 @@ function getFiltered() {
     return true;
   });
 
-  if (state.sortCol) {
+  if (state.sortCol === 'status') {
+    result = [...result].sort((a, b) => {
+      const aOpen = isOpen(a) ? 0 : 1;
+      const bOpen = isOpen(b) ? 0 : 1;
+      return aOpen - bOpen;
+    });
+  } else if (state.sortCol) {
     result = [...result].sort((a, b) => {
       const va = a[state.sortCol];
       const vb = b[state.sortCol];
@@ -705,6 +860,17 @@ function regionBadgeClass(region) {
   return '';
 }
 
+function renderWeatherCell(name) {
+  const w = weatherCache[name];
+  if (!w) return '<span style="color:#aaa;font-size:11px;">読込中...</span>';
+  return `<div class="weather-cell">${w.days.map(day => `
+    <div class="weather-day">
+      <span class="weather-icon">${day.icon}</span>
+      <span class="weather-temp">${day.maxTemp}/${day.minTemp}</span>
+    </div>
+  `).join('')}</div>`;
+}
+
 function renderTable(data) {
   const tbody = document.getElementById('table-body');
   const noResults = document.getElementById('no-results');
@@ -718,10 +884,16 @@ function renderTable(data) {
 
   tbody.innerHTML = data.map(d => {
     const bc = regionBadgeClass(d.region);
+    const open = isOpen(d);
+    const statusHtml = open
+      ? `<span style="color:#1ABB9C;font-weight:600;">営業中 ✓</span>`
+      : `<span style="color:#aaa;">終了</span>`;
     return `
       <tr>
         <td class="resort-name">${escHtml(d.name)}</td>
         <td><span class="region-badge ${bc}">${escHtml(d.region)}</span></td>
+        <td>${statusHtml}</td>
+        <td>${renderWeatherCell(d.name)}</td>
         <td style="text-align:right;font-weight:600;">${d.courses_total}</td>
         <td style="min-width:130px;">
           <div class="mini-bar">
@@ -801,11 +973,19 @@ function renderCards(data) {
     return;
   }
 
-  container.innerHTML = data.map((d, idx) => `
+  container.innerHTML = data.map((d, idx) => {
+    const open = isOpen(d);
+    const badgeHtml = open
+      ? `<span class="card-status-badge open">営業中</span>`
+      : `<span class="card-status-badge closed">終了</span>`;
+    return `
     <div class="resort-card">
       <div class="card-header">
-        <div class="card-name">${escHtml(d.name)}</div>
-        <div class="card-region">${escHtml(d.prefecture)}</div>
+        <div>
+          <div class="card-name">${escHtml(d.name)}</div>
+          <div class="card-region">${escHtml(d.prefecture)}</div>
+        </div>
+        ${badgeHtml}
       </div>
       <div class="card-body">
         <div class="card-canvas-wrap">
@@ -837,13 +1017,90 @@ function renderCards(data) {
         <a class="card-link-btn" href="${escAttr(d.url)}" target="_blank" rel="noopener">公式サイトへ &#8599;</a>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 
   // Draw donuts after DOM insertion
   data.forEach((d, idx) => {
     const canvas = document.getElementById(`donut-${idx}`);
     if (canvas) drawDonut(canvas, d.beginner_pct, d.intermediate_pct, d.advanced_pct);
   });
+}
+
+// ==================== MAP ====================
+let leafletMap = null;
+let mapMarkers = [];
+
+function renderMap(data) {
+  if (!leafletMap) {
+    leafletMap = L.map('leaflet-map').setView([38.5, 139.5], 6);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://osm.org/">OSM</a>',
+      maxZoom: 18,
+      subdomains: 'abcd',
+    }).addTo(leafletMap);
+  }
+
+  // 既存マーカーを削除
+  mapMarkers.forEach(m => leafletMap.removeLayer(m));
+  mapMarkers = [];
+
+  // 難易度に応じたマーカー色
+  function getColor(d) {
+    if (d.advanced_pct >= 30) return '#E74C3C';
+    if (d.beginner_pct >= 40) return '#1ABB9C';
+    return '#F0AD4E';
+  }
+
+  data.forEach(d => {
+    if (!d.lat || !d.lon) return;
+
+    const color = getColor(d);
+    const icon = L.divIcon({
+      className: 'custom-marker',
+      html: `<div style="
+        background:${color};
+        width:14px; height:14px;
+        border-radius:50%;
+        border:2px solid #fff;
+        box-shadow:0 1px 4px rgba(0,0,0,0.4);
+      "></div>`,
+      iconSize: [14, 14],
+      iconAnchor: [7, 7],
+    });
+
+    const marker = L.marker([d.lat, d.lon], { icon })
+      .addTo(leafletMap)
+      .bindTooltip(d.name, {
+        permanent: true,
+        direction: 'right',
+        offset: [10, 0],
+        className: 'map-label',
+      })
+      .bindPopup(`
+        <div style="font-family:sans-serif;min-width:180px;">
+          <strong style="font-size:14px;">${d.name}</strong><br>
+          <span style="color:#888;">${d.prefecture}</span>
+          <hr style="margin:4px 0;border-color:#eee;">
+          <div style="font-size:12px;line-height:1.6;">
+            コース: <strong>${d.courses_total}</strong>本
+            (初${d.beginner_pct}/中${d.intermediate_pct}/上${d.advanced_pct}%)<br>
+            リフト: <strong>${d.lifts_total}</strong>基<br>
+            標高: <strong>${d.max_elevation.toLocaleString()}</strong>m<br>
+            最長: <strong>${(d.longest_run/1000).toFixed(1)}</strong>km
+          </div>
+          <a href="${d.url}" target="_blank" rel="noopener"
+             style="display:block;margin-top:6px;color:#1ABB9C;font-size:12px;">
+            公式サイト &#8599;
+          </a>
+        </div>
+      `);
+
+    mapMarkers.push(marker);
+  });
+
+  // 表示後にサイズ再計算（タブ切替時に必要）
+  setTimeout(() => leafletMap.invalidateSize(), 100);
 }
 
 // ==================== RENDER ====================
@@ -853,8 +1110,10 @@ function render() {
 
   if (state.view === 'table') {
     renderTable(filtered);
-  } else {
+  } else if (state.view === 'card') {
     renderCards(filtered);
+  } else if (state.view === 'map') {
+    renderMap(filtered);
   }
 }
 
@@ -875,7 +1134,7 @@ function setupSortHeaders() {
         th.className = 'sorted-desc';
       }
       // Sync select if applicable
-      const selectMap = {courses_total:'courses_total',lifts_total:'lifts_total',max_elevation:'max_elevation',longest_run:'longest_run'};
+      const selectMap = {courses_total:'courses_total',lifts_total:'lifts_total',max_elevation:'max_elevation',longest_run:'longest_run',status:'status'};
       const sel = document.getElementById('sort-select');
       sel.value = selectMap[col] || '';
       render();
@@ -943,7 +1202,6 @@ document.getElementById('toggle-beginner').addEventListener('click', function() 
   state.filterBeginner = !state.filterBeginner;
   this.dataset.active = String(state.filterBeginner);
   this.classList.toggle('active-beginner', state.filterBeginner);
-  // Reset advanced if both would be active (optional: allow both)
   render();
 });
 
@@ -957,25 +1215,65 @@ document.getElementById('toggle-advanced').addEventListener('click', function() 
 // View tabs
 document.getElementById('tab-table').addEventListener('click', function() {
   state.view = 'table';
+  document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
   this.classList.add('active');
-  document.getElementById('tab-card').classList.remove('active');
   document.getElementById('table-view').classList.add('active');
   document.getElementById('card-view').classList.remove('active');
+  document.getElementById('map-view').classList.remove('active');
   render();
 });
 
 document.getElementById('tab-card').addEventListener('click', function() {
   state.view = 'card';
+  document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
   this.classList.add('active');
-  document.getElementById('tab-table').classList.remove('active');
   document.getElementById('card-view').classList.add('active');
   document.getElementById('table-view').classList.remove('active');
+  document.getElementById('map-view').classList.remove('active');
   render();
 });
+
+document.getElementById('tab-map').addEventListener('click', function() {
+  state.view = 'map';
+  document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+  this.classList.add('active');
+  document.getElementById('map-view').classList.add('active');
+  document.getElementById('table-view').classList.remove('active');
+  document.getElementById('card-view').classList.remove('active');
+  renderMap(getFiltered());
+});
+
+// ==================== SIDEBAR NAV ====================
+function switchView(view) {
+  state.view = view;
+  // Update top tabs
+  document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+  const tabMap = { table: 'tab-table', card: 'tab-card', map: 'tab-map' };
+  document.getElementById(tabMap[view])?.classList.add('active');
+  // Update sidebar
+  document.querySelectorAll('#sidebar .sidebar-menu a').forEach(a => a.classList.remove('active'));
+  const navMap = { table: 'nav-table', card: 'nav-card', map: 'nav-map' };
+  document.getElementById(navMap[view])?.classList.add('active');
+  // Show/hide views
+  document.getElementById('table-view').classList.toggle('active', view === 'table');
+  document.getElementById('card-view').classList.toggle('active', view === 'card');
+  document.getElementById('map-view').classList.toggle('active', view === 'map');
+  // Render
+  const filtered = getFiltered();
+  if (view === 'table') renderTable(filtered);
+  else if (view === 'card') renderCards(filtered);
+  else if (view === 'map') renderMap(filtered);
+}
+
+document.getElementById('nav-table').addEventListener('click', (e) => { e.preventDefault(); switchView('table'); });
+document.getElementById('nav-card').addEventListener('click', (e) => { e.preventDefault(); switchView('card'); });
+document.getElementById('nav-map').addEventListener('click', (e) => { e.preventDefault(); switchView('map'); });
 
 // ==================== INIT ====================
 setupSortHeaders();
 render();
+// 天気データを非同期で取得（完了するたびに再描画）
+fetchAllWeather();
 </script>
 </body>
 </html>
