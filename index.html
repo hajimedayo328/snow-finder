@@ -705,7 +705,8 @@
 
 <script>
 // ==================== DATA ====================
-const SKI_DATA = [
+// ski_data.jsonから読み込み（GitHub Actionsで毎朝更新）
+let SKI_DATA = [
   {"name":"ニセコグラン・ヒラフ","region":"北海道","prefecture":"北海道","courses_total":30,"beginner_pct":29,"intermediate_pct":40,"advanced_pct":31,"lifts_total":18,"max_elevation":1308,"longest_run":5600,"url":"https://www.grand-hirafu.jp","lat":42.84,"lon":140.70,"season_end":"2026-03-30"},
   {"name":"ニセコビレッジ","region":"北海道","prefecture":"北海道","courses_total":27,"beginner_pct":30,"intermediate_pct":40,"advanced_pct":30,"lifts_total":12,"max_elevation":1308,"longest_run":4000,"url":"https://www.niseko-village.com","lat":42.82,"lon":140.69,"season_end":"2026-03-30"},
   {"name":"ニセコアンヌプリ","region":"北海道","prefecture":"北海道","courses_total":18,"beginner_pct":28,"intermediate_pct":44,"advanced_pct":28,"lifts_total":9,"max_elevation":1308,"longest_run":4000,"url":"https://www.niseko-annupuri.com","lat":42.80,"lon":140.68,"season_end":"2026-03-30"},
@@ -1072,7 +1073,7 @@ function renderMap(data) {
     const marker = L.marker([d.lat, d.lon], { icon })
       .addTo(leafletMap)
       .bindTooltip(d.name, {
-        permanent: true,
+        permanent: false,
         direction: 'right',
         offset: [10, 0],
         className: 'map-label',
@@ -1270,10 +1271,43 @@ document.getElementById('nav-card').addEventListener('click', (e) => { e.prevent
 document.getElementById('nav-map').addEventListener('click', (e) => { e.preventDefault(); switchView('map'); });
 
 // ==================== INIT ====================
-setupSortHeaders();
-render();
-// 天気データを非同期で取得（完了するたびに再描画）
-fetchAllWeather();
+// 外部JSONを試し、失敗したらインラインデータを使う
+(async function init() {
+  try {
+    const resp = await fetch('ski_data.json');
+    if (resp.ok) {
+      const data = await resp.json();
+      if (data.length > 0) {
+        SKI_DATA = data;
+        console.log(`外部JSON読み込み: ${data.length}件`);
+        // 新しい地域をフィルターに追加
+        const allRegions = new Set(data.map(d => d.region).filter(Boolean));
+        state.selectedRegions = allRegions;
+        // チェックボックスも更新
+        const filterEl = document.getElementById('region-filter');
+        filterEl.innerHTML = '';
+        for (const reg of [...allRegions].sort()) {
+          const label = document.createElement('label');
+          label.innerHTML = `<input type="checkbox" class="region-cb" value="${reg}" checked> ${reg}`;
+          filterEl.appendChild(label);
+        }
+        // チェックボックスイベント再設定
+        document.querySelectorAll('.region-cb').forEach(cb => {
+          cb.addEventListener('change', function() {
+            if (this.checked) state.selectedRegions.add(this.value);
+            else state.selectedRegions.delete(this.value);
+            render();
+          });
+        });
+      }
+    }
+  } catch (e) {
+    console.log('外部JSON読み込み失敗、インラインデータを使用');
+  }
+  setupSortHeaders();
+  render();
+  fetchAllWeather();
+})();
 </script>
 </body>
 </html>
