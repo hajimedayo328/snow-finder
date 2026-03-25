@@ -13,8 +13,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0256s.htm",
     "lat": 38.3,
     "lon": 140.06,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0256s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0256s.htm",
+    "season_end": "2026-03-15"
   },
   {
     "name": "BAGPARK",
@@ -30,7 +31,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0952s.htm",
     "lat": 36.77,
     "lon": 139.24,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0952s.htm"
   },
   {
@@ -64,7 +65,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0663s.htm",
     "lat": 42.95,
     "lon": 141.28,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0663s.htm"
   },
   {
@@ -81,7 +82,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0001s.htm",
     "lat": 36.95,
     "lon": 138.8,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0001s.htm"
   },
   {
@@ -98,7 +99,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0196s.htm",
     "lat": 36.6,
     "lon": 137.83,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0196s.htm"
   },
   {
@@ -115,8 +116,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0061s.htm",
     "lat": 36.69,
     "lon": 137.83,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0061s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0061s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "IOX‐AROSA",
@@ -132,8 +134,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0962s.htm",
     "lat": 36.52,
     "lon": 136.82,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0962s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0962s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "IWANAI RESORT（旧：ニセコいわない国際スキー場）",
@@ -149,7 +152,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0614s.htm",
     "lat": 42.95,
     "lon": 140.51,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0614s.htm"
   },
   {
@@ -166,8 +169,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0030s.htm",
     "lat": 43.07,
     "lon": 140.99,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0030s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0030s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "Mt.KOSHA よませ温泉スキー場 &amp; X-JAM 高井富士",
@@ -183,8 +187,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0023s.htm",
     "lat": 36.78,
     "lon": 138.42,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0023s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0023s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "Mt.T by 星野リゾート",
@@ -200,8 +205,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0769s.htm",
     "lat": 36.82,
     "lon": 138.95,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0769s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0769s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "Mt．乗鞍スノーリゾート",
@@ -217,8 +223,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0845s.htm",
     "lat": 36.12,
     "lon": 137.61,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0845s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0845s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "NASPAスキーガーデン",
@@ -234,8 +241,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0156s.htm",
     "lat": 36.93,
     "lon": 138.81,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0156s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0156s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "Ohana Resort（旧名称 国境スノーパーク）",
@@ -251,7 +259,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0890s.htm",
     "lat": 35.54,
     "lon": 136.09,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0890s.htm"
   },
   {
@@ -268,7 +276,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0865s.htm",
     "lat": 36.56,
     "lon": 138.35,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0865s.htm"
   },
   {
@@ -286,7 +294,8 @@
     "lat": 43.15,
     "lon": 141.13,
     "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0174s.htm"
+    "source_url": "https://surfsnow.jp/guide/htm/r0174s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "SOL－FA　オダスキーゲレンデ",
@@ -336,7 +345,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0326s.htm",
     "lat": 36.63,
     "lon": 137.84,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0326s.htm"
   },
   {
@@ -353,7 +362,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0949s.htm",
     "lat": 36.67,
     "lon": 138.47,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0949s.htm"
   },
   {
@@ -370,8 +379,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0864s.htm",
     "lat": 36.12,
     "lon": 137.83,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0864s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0864s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "あだたら高原スキー場",
@@ -387,7 +397,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0216s.htm",
     "lat": 37.62,
     "lon": 140.32,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0216s.htm"
   },
   {
@@ -404,8 +414,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0006s.htm",
     "lat": 36.74,
     "lon": 138.17,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0006s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0006s.htm",
+    "season_end": "2026-03-15"
   },
   {
     "name": "いぶきの里スキー場",
@@ -421,7 +432,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0916s.htm",
     "lat": 35.17,
     "lon": 133.41,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0916s.htm"
   },
   {
@@ -455,7 +466,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0220s.htm",
     "lat": 35.45,
     "lon": 134.53,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0220s.htm"
   },
   {
@@ -472,8 +483,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0070s.htm",
     "lat": 36.89,
     "lon": 138.78,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0070s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0070s.htm",
+    "season_end": "2026-05-17"
   },
   {
     "name": "かたしな高原スキー場",
@@ -489,7 +501,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0303s.htm",
     "lat": 36.81,
     "lon": 139.23,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0303s.htm"
   },
   {
@@ -506,7 +518,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0609s.htm",
     "lat": 43.52,
     "lon": 142.02,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0609s.htm"
   },
   {
@@ -540,7 +552,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0856s.htm",
     "lat": 37.0,
     "lon": 138.57,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0856s.htm"
   },
   {
@@ -557,7 +569,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0246s.htm",
     "lat": 43.03,
     "lon": 141.28,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0246s.htm"
   },
   {
@@ -608,7 +620,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0696s.htm",
     "lat": 40.58,
     "lon": 140.39,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0696s.htm"
   },
   {
@@ -625,7 +637,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0682s.htm",
     "lat": 43.54,
     "lon": 141.8,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0682s.htm"
   },
   {
@@ -643,7 +655,8 @@
     "lat": 36.44,
     "lon": 136.93,
     "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0817s.htm"
+    "source_url": "https://surfsnow.jp/guide/htm/r0817s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "たざわ湖スキー場",
@@ -659,8 +672,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0263s.htm",
     "lat": 39.76,
     "lon": 140.76,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0263s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0263s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "たんばらスキーパーク",
@@ -676,8 +690,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0170s.htm",
     "lat": 36.78,
     "lon": 139.07,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0170s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0170s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "だいせんホワイトリゾート",
@@ -693,7 +708,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0247s.htm",
     "lat": 35.4,
     "lon": 133.54,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0247s.htm"
   },
   {
@@ -710,7 +725,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0901s.htm",
     "lat": 35.22,
     "lon": 134.39,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0901s.htm"
   },
   {
@@ -727,8 +742,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0144s.htm",
     "lat": 36.75,
     "lon": 137.86,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0144s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0144s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "とうま山スキー場",
@@ -744,7 +760,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0631s.htm",
     "lat": 43.84,
     "lon": 142.54,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0631s.htm"
   },
   {
@@ -761,8 +777,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0812s.htm",
     "lat": 37.44,
     "lon": 139.04,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0812s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0812s.htm",
+    "season_end": "2026-03-01"
   },
   {
     "name": "となみ夢の平スキー場",
@@ -778,7 +795,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0822s.htm",
     "lat": 36.59,
     "lon": 137.02,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0822s.htm"
   },
   {
@@ -795,7 +812,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0813s.htm",
     "lat": 37.02,
     "lon": 138.73,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0813s.htm"
   },
   {
@@ -829,7 +846,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0245s.htm",
     "lat": 35.29,
     "lon": 134.54,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0245s.htm"
   },
   {
@@ -846,7 +863,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0877s.htm",
     "lat": 36.31,
     "lon": 137.25,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0877s.htm"
   },
   {
@@ -880,7 +897,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0863s.htm",
     "lat": 35.31,
     "lon": 137.62,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0863s.htm"
   },
   {
@@ -897,8 +914,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0272s.htm",
     "lat": 36.01,
     "lon": 136.91,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0272s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0272s.htm",
+    "season_end": "2026-03-15"
   },
   {
     "name": "ひるぜんキッズスノーパーク",
@@ -914,8 +932,9 @@
     "url": "https://surfsnow.jp/guide/htm/r1014s.htm",
     "lat": 35.29,
     "lon": 133.62,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r1014s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r1014s.htm",
+    "season_end": "2026-03-01"
   },
   {
     "name": "ひるぜんベアバレースキー場",
@@ -931,7 +950,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0912s.htm",
     "lat": 35.26,
     "lon": 133.6,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0912s.htm"
   },
   {
@@ -948,7 +967,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0254s.htm",
     "lat": 35.2,
     "lon": 135.91,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0254s.htm"
   },
   {
@@ -965,8 +984,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0608s.htm",
     "lat": 43.93,
     "lon": 142.5,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0608s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0608s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "ふじてんスノーリゾート",
@@ -999,8 +1019,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0804s.htm",
     "lat": 38.39,
     "lon": 139.55,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0804s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0804s.htm",
+    "season_end": "2026-03-15"
   },
   {
     "name": "ほろたちスキー場",
@@ -1016,7 +1037,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0628s.htm",
     "lat": 44.01,
     "lon": 142.14,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0628s.htm"
   },
   {
@@ -1033,8 +1054,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0689s.htm",
     "lat": 40.88,
     "lon": 141.07,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0689s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0689s.htm",
+    "season_end": "2024-03-06"
   },
   {
     "name": "みなかみ町営赤沢スキー場",
@@ -1050,8 +1072,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0770s.htm",
     "lat": 36.73,
     "lon": 138.83,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0770s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0770s.htm",
+    "season_end": "2024-03-10"
   },
   {
     "name": "みやぎ蔵王えぼしリゾート",
@@ -1067,8 +1090,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0024s.htm",
     "lat": 38.13,
     "lon": 140.53,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0024s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0024s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "みやぎ蔵王セントメリースキー場",
@@ -1084,8 +1108,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0236s.htm",
     "lat": 38.22,
     "lon": 140.52,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0236s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0236s.htm",
+    "season_end": "2024-03-20"
   },
   {
     "name": "みやぎ蔵王七ヶ宿スキー場",
@@ -1101,8 +1126,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0235s.htm",
     "lat": 38.0,
     "lon": 140.37,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0235s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0235s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "みやぎ蔵王白石スキー場",
@@ -1135,7 +1161,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0687s.htm",
     "lat": 41.26,
     "lon": 141.14,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0687s.htm"
   },
   {
@@ -1152,8 +1178,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0138s.htm",
     "lat": 35.94,
     "lon": 137.04,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0138s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0138s.htm",
+    "season_end": "2026-04-12"
   },
   {
     "name": "もみのき森林公園スキー場",
@@ -1169,8 +1196,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0926s.htm",
     "lat": 34.48,
     "lon": 132.18,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0926s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0926s.htm",
+    "season_end": "2023-03-05"
   },
   {
     "name": "やくらいファミリースキー場",
@@ -1203,8 +1231,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0847s.htm",
     "lat": 35.96,
     "lon": 137.73,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0847s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0847s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "やまがた 赤倉温泉スキー場",
@@ -1220,8 +1249,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0739s.htm",
     "lat": 38.71,
     "lon": 140.55,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0739s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0739s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "やわたハイランド191リゾート",
@@ -1288,7 +1318,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0870s.htm",
     "lat": 35.87,
     "lon": 136.95,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0870s.htm"
   },
   {
@@ -1305,7 +1335,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0225s.htm",
     "lat": 35.5,
     "lon": 134.68,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0225s.htm"
   },
   {
@@ -1322,8 +1352,9 @@
     "url": "https://surfsnow.jp/guide/htm/r1020s.htm",
     "lat": 36.99,
     "lon": 138.18,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r1020s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r1020s.htm",
+    "season_end": "2026-05-10"
   },
   {
     "name": "ウィンザースノービレッジ",
@@ -1339,7 +1370,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0685s.htm",
     "lat": 42.59,
     "lon": 140.76,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0685s.htm"
   },
   {
@@ -1356,7 +1387,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0199s.htm",
     "lat": 35.97,
     "lon": 136.8,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0199s.htm"
   },
   {
@@ -1373,8 +1404,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0318s.htm",
     "lat": 35.08,
     "lon": 136.66,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0318s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0318s.htm",
+    "season_end": "2018-10-21"
   },
   {
     "name": "ウォータージャンプ ナオエ",
@@ -1390,7 +1422,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0967s.htm",
     "lat": 36.57,
     "lon": 137.42,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0967s.htm"
   },
   {
@@ -1424,8 +1456,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0041s.htm",
     "lat": 36.66,
     "lon": 137.84,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0041s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0041s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "エーデルワイススキーリゾート",
@@ -1441,8 +1474,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0161s.htm",
     "lat": 36.92,
     "lon": 139.75,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0161s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0161s.htm",
+    "season_end": "2025-03-31"
   },
   {
     "name": "オグナほたかスキー場",
@@ -1458,7 +1492,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0774s.htm",
     "lat": 36.78,
     "lon": 139.17,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0774s.htm"
   },
   {
@@ -1475,8 +1509,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0186s.htm",
     "lat": 38.79,
     "lon": 140.64,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0186s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0186s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "オロフレスキー場",
@@ -1492,7 +1527,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0665s.htm",
     "lat": 42.56,
     "lon": 140.99,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0665s.htm"
   },
   {
@@ -1509,8 +1544,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0325s.htm",
     "lat": 35.58,
     "lon": 138.75,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0325s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0325s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "カムイスキーリンクス",
@@ -1526,8 +1562,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0604s.htm",
     "lat": 43.7,
     "lon": 142.19,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0604s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0604s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "カルルス温泉サンライバスキー場",
@@ -1543,7 +1580,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0666s.htm",
     "lat": 42.52,
     "lon": 141.1,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0666s.htm"
   },
   {
@@ -1560,8 +1597,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0632s.htm",
     "lat": 43.73,
     "lon": 142.54,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0632s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0632s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "キューピットバレイ",
@@ -1577,7 +1615,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0150s.htm",
     "lat": 37.05,
     "lon": 138.48,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0150s.htm"
   },
   {
@@ -1594,7 +1632,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0244s.htm",
     "lat": 35.52,
     "lon": 136.39,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0244s.htm"
   },
   {
@@ -1611,8 +1649,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0079s.htm",
     "lat": 37.22,
     "lon": 140.03,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0079s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0079s.htm",
+    "season_end": "2024-03-10"
   },
   {
     "name": "グリーンバレー神室・神室スキー場",
@@ -1628,8 +1667,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0751s.htm",
     "lat": 38.92,
     "lon": 140.39,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0751s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0751s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "ゲレンデパーク セラ",
@@ -1645,7 +1685,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0951s.htm",
     "lat": 34.65,
     "lon": 133.09,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0951s.htm"
   },
   {
@@ -1662,7 +1702,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0065s.htm",
     "lat": 43.1,
     "lon": 141.21,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0065s.htm"
   },
   {
@@ -1679,8 +1719,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0330s.htm",
     "lat": 43.18,
     "lon": 142.81,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0330s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0330s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "サンタプレゼントパーク マロースゲレンデ",
@@ -1696,8 +1737,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0635s.htm",
     "lat": 43.76,
     "lon": 142.3,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0635s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0635s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "サンパーク都留　グラススキー場",
@@ -1747,8 +1789,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0018s.htm",
     "lat": 35.95,
     "lon": 138.41,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0018s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0018s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "シャトレーゼスキーバレー小海",
@@ -1764,7 +1807,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0068s.htm",
     "lat": 36.06,
     "lon": 138.41,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0068s.htm"
   },
   {
@@ -1781,8 +1824,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0106s.htm",
     "lat": 35.93,
     "lon": 138.49,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0106s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0106s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "シャトー塩沢",
@@ -1798,7 +1842,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0158s.htm",
     "lat": 37.05,
     "lon": 138.83,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0158s.htm"
   },
   {
@@ -1815,8 +1859,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0782s.htm",
     "lat": 37.0,
     "lon": 138.07,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0782s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0782s.htm",
+    "season_end": "2026-05-05"
   },
   {
     "name": "ジュネス栗駒スキー場",
@@ -1832,8 +1877,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0175s.htm",
     "lat": 39.16,
     "lon": 140.73,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0175s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0175s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "スカイバレイスキー場",
@@ -1849,7 +1895,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0222s.htm",
     "lat": 35.4,
     "lon": 134.57,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0222s.htm"
   },
   {
@@ -1866,7 +1912,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0019s.htm",
     "lat": 36.07,
     "lon": 136.56,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0019s.htm"
   },
   {
@@ -1883,7 +1929,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0252s.htm",
     "lat": 35.96,
     "lon": 136.8,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0252s.htm"
   },
   {
@@ -1900,8 +1946,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0209s.htm",
     "lat": 35.3,
     "lon": 138.77,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0209s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0209s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "スノーパーク尾瀬戸倉",
@@ -1917,7 +1964,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0115s.htm",
     "lat": 36.85,
     "lon": 139.24,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0115s.htm"
   },
   {
@@ -1935,7 +1982,8 @@
     "lat": 34.29,
     "lon": 135.9,
     "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0903s.htm"
+    "source_url": "https://surfsnow.jp/guide/htm/r0903s.htm",
+    "season_end": "2023-02-10"
   },
   {
     "name": "スノーリゾート ロマンスの神様（旧 木島平スキー場）",
@@ -1951,8 +1999,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0027s.htm",
     "lat": 36.82,
     "lon": 138.4,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0027s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0027s.htm",
+    "season_end": "2026-04-06"
   },
   {
     "name": "スノーリゾート猫山",
@@ -1985,7 +2034,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0258s.htm",
     "lat": 38.42,
     "lon": 140.72,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0258s.htm"
   },
   {
@@ -2002,7 +2051,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0816s.htm",
     "lat": 36.38,
     "lon": 136.87,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0816s.htm"
   },
   {
@@ -2019,8 +2068,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0016s.htm",
     "lat": 36.85,
     "lon": 138.26,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0016s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0016s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "ダイナスティスキーリゾート",
@@ -2036,7 +2086,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0662s.htm",
     "lat": 42.93,
     "lon": 141.45,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0662s.htm"
   },
   {
@@ -2053,8 +2103,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0231s.htm",
     "lat": 35.99,
     "lon": 136.87,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0231s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0231s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "テイネウォータージャンプ",
@@ -2070,7 +2121,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0960s.htm",
     "lat": 43.1,
     "lon": 141.21,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0960s.htm"
   },
   {
@@ -2087,8 +2138,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0945s.htm",
     "lat": 42.89,
     "lon": 140.7,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0945s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0945s.htm",
+    "season_end": "2026-04-12"
   },
   {
     "name": "ニセコアンヌプリ国際スキー場",
@@ -2104,8 +2156,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0260s.htm",
     "lat": 42.85,
     "lon": 140.65,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0260s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0260s.htm",
+    "season_end": "2025-05-06"
   },
   {
     "name": "ニセコビレッジスキーリゾート",
@@ -2121,8 +2174,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0119s.htm",
     "lat": 42.85,
     "lon": 140.67,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0119s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0119s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "ニセコモイワスキーリゾート",
@@ -2138,8 +2192,9 @@
     "url": "https://surfsnow.jp/guide/htm/r1009s.htm",
     "lat": 42.85,
     "lon": 140.63,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r1009s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r1009s.htm",
+    "season_end": "2025-04-06"
   },
   {
     "name": "ニセコ東急 グラン・ヒラフ",
@@ -2155,8 +2210,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0148s.htm",
     "lat": 42.86,
     "lon": 140.7,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0148s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0148s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "ニノックススノーパーク",
@@ -2172,7 +2228,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0970s.htm",
     "lat": 37.93,
     "lon": 139.47,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0970s.htm"
   },
   {
@@ -2189,8 +2245,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0679s.htm",
     "lat": 41.93,
     "lon": 140.63,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0679s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0679s.htm",
+    "season_end": "2024-03-05"
   },
   {
     "name": "ニュー・グリーンピア津南スキー場",
@@ -2206,8 +2263,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0084s.htm",
     "lat": 36.96,
     "lon": 138.69,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0084s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0084s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "ノルンみなかみスキー場",
@@ -2223,7 +2281,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0071s.htm",
     "lat": 36.74,
     "lon": 138.94,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0071s.htm"
   },
   {
@@ -2240,8 +2298,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0897s.htm",
     "lat": 35.39,
     "lon": 134.57,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0897s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0897s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "ハチ・ハチ北スキー場",
@@ -2257,7 +2316,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0053s.htm",
     "lat": 35.4,
     "lon": 134.56,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0053s.htm"
   },
   {
@@ -2274,8 +2333,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0067s.htm",
     "lat": 36.94,
     "lon": 139.75,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0067s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0067s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "パルコール嬬恋リゾート",
@@ -2291,8 +2351,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0147s.htm",
     "lat": 36.56,
     "lon": 138.46,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0147s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0147s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "ピラタス蓼科スノーリゾート",
@@ -2308,8 +2369,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0844s.htm",
     "lat": 36.07,
     "lon": 138.3,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0844s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0844s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "ファミリーゲレンデ 霧ヶ峰スキー場",
@@ -2325,8 +2387,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0860s.htm",
     "lat": 36.1,
     "lon": 138.16,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0860s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0860s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "ファミリースノーパーク ばんだい×2",
@@ -2376,7 +2439,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0077s.htm",
     "lat": 36.15,
     "lon": 138.21,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0077s.htm"
   },
   {
@@ -2393,7 +2456,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0273s.htm",
     "lat": 35.46,
     "lon": 137.67,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0273s.htm"
   },
   {
@@ -2427,7 +2490,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0116s.htm",
     "lat": 36.79,
     "lon": 138.96,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0116s.htm"
   },
   {
@@ -2461,7 +2524,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0194s.htm",
     "lat": 35.96,
     "lon": 136.93,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0194s.htm"
   },
   {
@@ -2478,8 +2541,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0059s.htm",
     "lat": 36.82,
     "lon": 139.22,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0059s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0059s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "マウンテンフィールド宮城蔵王すみかわスノーパーク",
@@ -2495,8 +2559,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0217s.htm",
     "lat": 38.14,
     "lon": 140.5,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0217s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0217s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "マウントレースイスキー場",
@@ -2512,8 +2577,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0213s.htm",
     "lat": 43.05,
     "lon": 141.97,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0213s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0213s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "マキノ高原マキノスキー場",
@@ -2546,8 +2612,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0039s.htm",
     "lat": 37.07,
     "lon": 138.84,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0039s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0039s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "メムロスキー場",
@@ -2563,7 +2630,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0986s.htm",
     "lat": 42.83,
     "lon": 142.99,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0986s.htm"
   },
   {
@@ -2614,8 +2681,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0955s.htm",
     "lat": 37.54,
     "lon": 140.15,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0955s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0955s.htm",
+    "season_end": "2018-11-04"
   },
   {
     "name": "リステルスキーファンタジア",
@@ -2631,7 +2699,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0005s.htm",
     "lat": 37.54,
     "lon": 140.15,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0005s.htm"
   },
   {
@@ -2648,8 +2716,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0883s.htm",
     "lat": 35.22,
     "lon": 138.28,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0883s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0883s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "リブマックスリゾート函館 グリー ンピア大沼スキーパーク",
@@ -2665,7 +2734,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0669s.htm",
     "lat": 42.01,
     "lon": 140.6,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0669s.htm"
   },
   {
@@ -2682,8 +2751,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0331s.htm",
     "lat": 42.75,
     "lon": 140.9,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0331s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0331s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "一本杉スノーパーク",
@@ -2699,8 +2769,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0791s.htm",
     "lat": 36.94,
     "lon": 138.81,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0791s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0791s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "七尾コロサスキー場",
@@ -2716,8 +2787,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0831s.htm",
     "lat": 36.98,
     "lon": 136.96,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0831s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0831s.htm",
+    "season_end": "2025-02-24"
   },
   {
     "name": "七戸町営スキー場",
@@ -2750,8 +2822,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0127s.htm",
     "lat": 36.64,
     "lon": 138.51,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0127s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0127s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "三川・温泉スキー場",
@@ -2767,7 +2840,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0802s.htm",
     "lat": 37.72,
     "lon": 139.39,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0802s.htm"
   },
   {
@@ -2784,8 +2857,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0648s.htm",
     "lat": 43.25,
     "lon": 141.98,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0648s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0648s.htm",
+    "season_end": "2026-03-23"
   },
   {
     "name": "上富良野町日の出スキー場",
@@ -2818,7 +2892,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0629s.htm",
     "lat": 43.85,
     "lon": 142.78,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0629s.htm"
   },
   {
@@ -2835,8 +2909,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0037s.htm",
     "lat": 37.03,
     "lon": 138.83,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0037s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0037s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "上野々スキー場",
@@ -2886,7 +2961,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0334s.htm",
     "lat": 35.82,
     "lon": 137.92,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0334s.htm"
   },
   {
@@ -2937,8 +3012,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0681s.htm",
     "lat": 42.85,
     "lon": 141.1,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0681s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0681s.htm",
+    "season_end": "2025-05-10"
   },
   {
     "name": "中頓別町寿スキー場",
@@ -2954,8 +3030,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0617s.htm",
     "lat": 44.99,
     "lon": 142.29,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0617s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0617s.htm",
+    "season_end": "2026-03-16"
   },
   {
     "name": "丸沼高原スキー場",
@@ -2971,8 +3048,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0025s.htm",
     "lat": 36.81,
     "lon": 139.33,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0025s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0025s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "久万スキーランド",
@@ -2988,8 +3066,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0934s.htm",
     "lat": 33.72,
     "lon": 132.87,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0934s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0934s.htm",
+    "season_end": "2026-03-15"
   },
   {
     "name": "九重スキー場",
@@ -3039,7 +3118,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0997s.htm",
     "lat": 37.64,
     "lon": 140.33,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0997s.htm"
   },
   {
@@ -3090,8 +3169,9 @@
     "url": "https://surfsnow.jp/guide/htm/r1013s.htm",
     "lat": 33.96,
     "lon": 133.88,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r1013s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r1013s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "京・大阪KINGS",
@@ -3107,8 +3187,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0976s.htm",
     "lat": 34.79,
     "lon": 135.74,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0976s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0976s.htm",
+    "season_end": "2025-12-24"
   },
   {
     "name": "仁木町民スキー場",
@@ -3124,8 +3205,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0664s.htm",
     "lat": 43.12,
     "lon": 140.73,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0664s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0664s.htm",
+    "season_end": "2023-03-05"
   },
   {
     "name": "今庄365スキー場",
@@ -3158,8 +3240,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0668s.htm",
     "lat": 42.47,
     "lon": 140.2,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0668s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0668s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "伊ノ沢市民スキー場",
@@ -3192,8 +3275,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0809s.htm",
     "lat": 36.91,
     "lon": 138.17,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0809s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0809s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "会津高原たかつえスキー場",
@@ -3209,8 +3293,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0759s.htm",
     "lat": 37.11,
     "lon": 139.62,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0759s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0759s.htm",
+    "season_end": "2026-03-30"
   },
   {
     "name": "会津高原だいくらスキー場",
@@ -3226,7 +3311,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0332s.htm",
     "lat": 37.18,
     "lon": 139.64,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0332s.htm"
   },
   {
@@ -3243,7 +3328,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0333s.htm",
     "lat": 37.27,
     "lon": 139.55,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0333s.htm"
   },
   {
@@ -3260,8 +3345,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0899s.htm",
     "lat": 35.52,
     "lon": 134.49,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0899s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0899s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "佐久スキーガーデン「パラダ」北パラダスキー場",
@@ -3277,7 +3363,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0105s.htm",
     "lat": 36.28,
     "lon": 138.51,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0105s.htm"
   },
   {
@@ -3294,7 +3380,7 @@
     "url": "https://surfsnow.jp/guide/htm/r1021s.htm",
     "lat": 36.28,
     "lon": 138.51,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r1021s.htm"
   },
   {
@@ -3311,8 +3397,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0654s.htm",
     "lat": 44.01,
     "lon": 143.75,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0654s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0654s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "余呉高原リゾート・ヤップ",
@@ -3328,7 +3415,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0014s.htm",
     "lat": 35.7,
     "lon": 136.16,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0014s.htm"
   },
   {
@@ -3345,8 +3432,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0229s.htm",
     "lat": 36.05,
     "lon": 137.71,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0229s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0229s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "信州開田高原マイアスキー場",
@@ -3362,8 +3450,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0849s.htm",
     "lat": 35.93,
     "lon": 137.53,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0849s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0849s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "倶知安町旭ヶ丘スキー場",
@@ -3379,7 +3468,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0673s.htm",
     "lat": 42.9,
     "lon": 140.74,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0673s.htm"
   },
   {
@@ -3396,8 +3485,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0840s.htm",
     "lat": 36.07,
     "lon": 138.38,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0840s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0840s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "八幡平リゾート パノラマスキー場＆下倉スキー場",
@@ -3413,8 +3503,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0009s.htm",
     "lat": 39.89,
     "lon": 140.98,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0009s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0009s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "八幡平市 田山スキー場",
@@ -3430,7 +3521,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0704s.htm",
     "lat": 40.13,
     "lon": 140.95,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0704s.htm"
   },
   {
@@ -3447,7 +3538,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0964s.htm",
     "lat": 37.15,
     "lon": 138.97,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0964s.htm"
   },
   {
@@ -3481,8 +3572,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0044s.htm",
     "lat": 37.12,
     "lon": 138.98,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0044s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0044s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "六甲山スノーパーク",
@@ -3498,8 +3590,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0900s.htm",
     "lat": 34.77,
     "lon": 135.24,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0900s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0900s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "函館七飯スノーパーク",
@@ -3515,8 +3608,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0120s.htm",
     "lat": 41.99,
     "lon": 140.75,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0120s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0120s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "創遊村229スキーランド",
@@ -3532,7 +3626,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0695s.htm",
     "lat": 40.36,
     "lon": 141.07,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0695s.htm"
   },
   {
@@ -3566,7 +3660,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0104s.htm",
     "lat": 37.1,
     "lon": 139.45,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0104s.htm"
   },
   {
@@ -3600,8 +3694,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0655s.htm",
     "lat": 43.77,
     "lon": 143.61,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0655s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0655s.htm",
+    "season_end": "2026-03-20"
   },
   {
     "name": "北見若松市民スキー場",
@@ -3634,7 +3729,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0929s.htm",
     "lat": 34.45,
     "lon": 131.7,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0929s.htm"
   },
   {
@@ -3651,8 +3746,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0806s.htm",
     "lat": 37.32,
     "lon": 138.89,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0806s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0806s.htm",
+    "season_end": "2025-03-16"
   },
   {
     "name": "只見スキー場",
@@ -3685,8 +3781,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0621s.htm",
     "lat": 44.4,
     "lon": 142.51,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0621s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0621s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "和寒町東山スキー場",
@@ -3702,7 +3799,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0982s.htm",
     "lat": 44.03,
     "lon": 142.41,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0982s.htm"
   },
   {
@@ -3736,7 +3833,7 @@
     "url": "https://surfsnow.jp/guide/htm/r1019s.htm",
     "lat": 39.05,
     "lon": 140.97,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r1019s.htm"
   },
   {
@@ -3753,7 +3850,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0650s.htm",
     "lat": 43.16,
     "lon": 142.56,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0650s.htm"
   },
   {
@@ -3822,7 +3919,8 @@
     "lat": 44.27,
     "lon": 142.34,
     "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0624s.htm"
+    "source_url": "https://surfsnow.jp/guide/htm/r0624s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "士別市あさひスキー場",
@@ -3839,7 +3937,8 @@
     "lat": 44.12,
     "lon": 142.6,
     "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0625s.htm"
+    "source_url": "https://surfsnow.jp/guide/htm/r0625s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "夏油高原スキー場",
@@ -3855,8 +3954,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0270s.htm",
     "lat": 39.24,
     "lon": 140.91,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0270s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0270s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "夜越山スキー場",
@@ -3906,7 +4006,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0722s.htm",
     "lat": 39.68,
     "lon": 140.39,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0722s.htm"
   },
   {
@@ -3923,7 +4023,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0723s.htm",
     "lat": 39.52,
     "lon": 140.65,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0723s.htm"
   },
   {
@@ -3940,8 +4040,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0731s.htm",
     "lat": 39.44,
     "lon": 140.43,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0731s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0731s.htm",
+    "season_end": "2025-02-24"
   },
   {
     "name": "大佐スキー場",
@@ -3957,7 +4058,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0919s.htm",
     "lat": 34.75,
     "lon": 132.22,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0919s.htm"
   },
   {
@@ -3974,8 +4075,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0828s.htm",
     "lat": 36.28,
     "lon": 136.54,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0828s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0828s.htm",
+    "season_end": "2025-03-16"
   },
   {
     "name": "大山ますみず高原スキー場 〜SNOW PARK〜",
@@ -3991,8 +4093,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0906s.htm",
     "lat": 35.37,
     "lon": 133.52,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0906s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0906s.htm",
+    "season_end": "2026-03-20"
   },
   {
     "name": "大山鏡ヶ成スキー場",
@@ -4008,8 +4111,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0907s.htm",
     "lat": 35.34,
     "lon": 133.59,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0907s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0907s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "大阪ウォータージャンプ O‐air",
@@ -4025,7 +4129,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0319s.htm",
     "lat": 34.72,
     "lon": 135.67,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0319s.htm"
   },
   {
@@ -4043,7 +4147,8 @@
     "lat": 43.71,
     "lon": 142.94,
     "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0630s.htm"
+    "source_url": "https://surfsnow.jp/guide/htm/r0630s.htm",
+    "season_end": "2025-05-06"
   },
   {
     "name": "大雪山旭岳ロープウェイ",
@@ -4076,8 +4181,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0943s.htm",
     "lat": 40.51,
     "lon": 140.56,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0943s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0943s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "天元台高原",
@@ -4093,8 +4199,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0211s.htm",
     "lat": 37.77,
     "lon": 140.14,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0211s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0211s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "天狗高原スキー場",
@@ -4110,7 +4217,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0937s.htm",
     "lat": 33.48,
     "lon": 133.0,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0937s.htm"
   },
   {
@@ -4127,7 +4234,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0738s.htm",
     "lat": 38.35,
     "lon": 140.48,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0738s.htm"
   },
   {
@@ -4144,8 +4251,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0717s.htm",
     "lat": 39.79,
     "lon": 140.22,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0717s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0717s.htm",
+    "season_end": "2026-03-15"
   },
   {
     "name": "太鼓山『スノー』どんどんパークinスイス村（旧名称 スイス村スキーリゾート）",
@@ -4162,7 +4270,8 @@
     "lat": 35.69,
     "lon": 135.2,
     "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0894s.htm"
+    "source_url": "https://surfsnow.jp/guide/htm/r0894s.htm",
+    "season_end": "2022-03-19"
   },
   {
     "name": "奥中山高原スキー場",
@@ -4178,7 +4287,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0699s.htm",
     "lat": 40.08,
     "lon": 141.19,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0699s.htm"
   },
   {
@@ -4195,8 +4304,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0693s.htm",
     "lat": 40.58,
     "lon": 140.99,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0693s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0693s.htm",
+    "season_end": "2026-03-16"
   },
   {
     "name": "奥利根スノーパーク",
@@ -4212,8 +4322,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0074s.htm",
     "lat": 36.8,
     "lon": 139.01,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0074s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0074s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "奥只見丸山スキー場",
@@ -4229,8 +4340,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0789s.htm",
     "lat": 37.16,
     "lon": 139.25,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0789s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0789s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "奥大山スキー場",
@@ -4263,8 +4375,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0160s.htm",
     "lat": 36.78,
     "lon": 138.53,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0160s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0160s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "奥神鍋スキー場",
@@ -4280,7 +4393,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0902s.htm",
     "lat": 35.5,
     "lon": 134.65,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0902s.htm"
   },
   {
@@ -4297,7 +4410,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0200s.htm",
     "lat": 34.5,
     "lon": 132.14,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0200s.htm"
   },
   {
@@ -4331,8 +4444,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0132s.htm",
     "lat": 36.86,
     "lon": 138.16,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0132s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0132s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "宇奈月温泉スキー場",
@@ -4348,7 +4462,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0820s.htm",
     "lat": 36.81,
     "lon": 137.58,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0820s.htm"
   },
   {
@@ -4365,7 +4479,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0676s.htm",
     "lat": 42.86,
     "lon": 141.8,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0676s.htm"
   },
   {
@@ -4382,8 +4496,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0226s.htm",
     "lat": 40.0,
     "lon": 140.97,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0226s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0226s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "室蘭市高原だんパラスキー場",
@@ -4399,7 +4514,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0667s.htm",
     "lat": 42.41,
     "lon": 141.0,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0667s.htm"
   },
   {
@@ -4416,8 +4531,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0297s.htm",
     "lat": 35.91,
     "lon": 138.21,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0297s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0297s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "富士見高原スキー場",
@@ -4433,8 +4549,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0861s.htm",
     "lat": 35.92,
     "lon": 138.31,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0861s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0861s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "富良野スキー場",
@@ -4450,8 +4567,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0118s.htm",
     "lat": 43.33,
     "lon": 142.35,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0118s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0118s.htm",
+    "season_end": "2026-05-07"
   },
   {
     "name": "小出スキー場",
@@ -4467,7 +4585,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0796s.htm",
     "lat": 37.23,
     "lon": 138.96,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0796s.htm"
   },
   {
@@ -4535,8 +4653,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0259s.htm",
     "lat": 43.18,
     "lon": 140.98,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0259s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0259s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "小野川温泉スキー場",
@@ -4569,8 +4688,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0762s.htm",
     "lat": 37.03,
     "lon": 139.4,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0762s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0762s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "山田温泉キッズスノーパーク",
@@ -4603,8 +4723,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0298s.htm",
     "lat": 36.93,
     "lon": 138.84,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0298s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0298s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "岩手高原スノーパーク",
@@ -4620,8 +4741,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0251s.htm",
     "lat": 39.81,
     "lon": 140.97,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0251s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0251s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "岩木山百沢スキー場",
@@ -4637,7 +4759,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0692s.htm",
     "lat": 40.63,
     "lon": 140.33,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0692s.htm"
   },
   {
@@ -4654,7 +4776,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0644s.htm",
     "lat": 43.16,
     "lon": 141.81,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0644s.htm"
   },
   {
@@ -4671,7 +4793,7 @@
     "url": "https://surfsnow.jp/guide/htm/r1015s.htm",
     "lat": 35.13,
     "lon": 134.67,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r1015s.htm"
   },
   {
@@ -4688,8 +4810,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0210s.htm",
     "lat": 36.77,
     "lon": 139.11,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0210s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0210s.htm",
+    "season_end": "2026-04-12"
   },
   {
     "name": "幌延町東ヶ丘スキー場",
@@ -4705,7 +4828,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0671s.htm",
     "lat": 45.02,
     "lon": 141.85,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0671s.htm"
   },
   {
@@ -4739,7 +4862,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0876s.htm",
     "lat": 36.18,
     "lon": 137.55,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0876s.htm"
   },
   {
@@ -4756,8 +4879,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0886s.htm",
     "lat": 35.02,
     "lon": 136.42,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0886s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0886s.htm",
+    "season_end": "2023-02-26"
   },
   {
     "name": "御嶽スキー場（旧 Ontake2240）",
@@ -4773,8 +4897,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0262s.htm",
     "lat": 35.86,
     "lon": 137.53,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0262s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0262s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "志賀高原 焼額山スキー場",
@@ -4790,8 +4915,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0130s.htm",
     "lat": 36.75,
     "lon": 138.53,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0130s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0130s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "志賀高原 熊の湯スキー場",
@@ -4807,7 +4933,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0294s.htm",
     "lat": 36.68,
     "lon": 138.5,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0294s.htm"
   },
   {
@@ -4824,8 +4950,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0280s.htm",
     "lat": 36.73,
     "lon": 138.51,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0280s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0280s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "忠類白銀台スキー場",
@@ -4841,7 +4968,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0975s.htm",
     "lat": 42.56,
     "lon": 143.3,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0975s.htm"
   },
   {
@@ -4875,7 +5002,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0914s.htm",
     "lat": 35.31,
     "lon": 133.98,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0914s.htm"
   },
   {
@@ -4892,7 +5019,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0661s.htm",
     "lat": 42.85,
     "lon": 141.49,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0661s.htm"
   },
   {
@@ -4909,8 +5036,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0171s.htm",
     "lat": 36.93,
     "lon": 138.39,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0171s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0171s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "戸隠スキー場",
@@ -4926,8 +5054,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0034s.htm",
     "lat": 36.75,
     "lon": 138.09,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0034s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0034s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "斑尾高原スキー場",
@@ -4943,7 +5072,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0202s.htm",
     "lat": 36.85,
     "lon": 138.28,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0202s.htm"
   },
   {
@@ -4960,7 +5089,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0834s.htm",
     "lat": 35.86,
     "lon": 136.31,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0834s.htm"
   },
   {
@@ -4977,7 +5106,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0755s.htm",
     "lat": 38.79,
     "lon": 140.34,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0755s.htm"
   },
   {
@@ -5011,8 +5140,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0767s.htm",
     "lat": 36.8,
     "lon": 139.42,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0767s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0767s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "日高国際スキー場",
@@ -5028,8 +5158,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0649s.htm",
     "lat": 42.87,
     "lon": 142.45,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0649s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0649s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "明野ヶ丘スキー場",
@@ -5045,8 +5176,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0686s.htm",
     "lat": 42.9,
     "lon": 143.37,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0686s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0686s.htm",
+    "season_end": "2026-03-15"
   },
   {
     "name": "星野リゾート トマム スキー場",
@@ -5062,8 +5194,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0274s.htm",
     "lat": 43.06,
     "lon": 142.62,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0274s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0274s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "星野リゾート ネコマ マウンテン(旧アルツ磐梯＆猫魔スキー場）",
@@ -5079,8 +5212,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0275s.htm",
     "lat": 37.59,
     "lon": 140.03,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0275s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0275s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "星野リゾート ネコマ マウンテン(旧アルツ磐梯＆猫魔スキー場）",
@@ -5096,8 +5230,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0275s.htm",
     "lat": 37.59,
     "lon": 140.03,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0215s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0215s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "暑寒別岳スキー場",
@@ -5113,8 +5248,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0638s.htm",
     "lat": 43.81,
     "lon": 141.53,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0638s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0638s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "月山スキー場",
@@ -5130,8 +5266,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0747s.htm",
     "lat": 38.52,
     "lon": 140.01,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0747s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0747s.htm",
+    "season_end": "2025-10-19"
   },
   {
     "name": "朝里川温泉スキー場",
@@ -5147,8 +5284,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0249s.htm",
     "lat": 43.14,
     "lon": 141.04,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0249s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0249s.htm",
+    "season_end": "2025-04-06"
   },
   {
     "name": "木曽福島スキー場",
@@ -5164,7 +5302,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0848s.htm",
     "lat": 35.94,
     "lon": 137.67,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0848s.htm"
   },
   {
@@ -5181,8 +5319,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0602s.htm",
     "lat": 43.07,
     "lon": 141.08,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0602s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0602s.htm",
+    "season_end": "2025-05-07"
   },
   {
     "name": "札幌藻岩山スキー場",
@@ -5198,8 +5337,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0612s.htm",
     "lat": 43.01,
     "lon": 141.33,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0612s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0612s.htm",
+    "season_end": "2026-03-15"
   },
   {
     "name": "朽木スキー場",
@@ -5215,7 +5355,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0889s.htm",
     "lat": 35.33,
     "lon": 135.94,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0889s.htm"
   },
   {
@@ -5249,8 +5389,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0795s.htm",
     "lat": 37.05,
     "lon": 138.6,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0795s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0795s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "松代ファミリースキー場",
@@ -5266,8 +5407,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0810s.htm",
     "lat": 37.12,
     "lon": 138.61,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0810s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0810s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "松山スキー場",
@@ -5283,7 +5425,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0734s.htm",
     "lat": 38.86,
     "lon": 139.98,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0734s.htm"
   },
   {
@@ -5300,7 +5442,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0618s.htm",
     "lat": 44.93,
     "lon": 142.57,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0618s.htm"
   },
   {
@@ -5317,7 +5459,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0659s.htm",
     "lat": 43.74,
     "lon": 144.93,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0659s.htm"
   },
   {
@@ -5334,8 +5476,9 @@
     "url": "https://surfsnow.jp/guide/htm/r1022s.htm",
     "lat": 36.68,
     "lon": 138.51,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r1022s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r1022s.htm",
+    "season_end": "2025-05-06"
   },
   {
     "name": "横手市天下森スキー場",
@@ -5368,8 +5511,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0741s.htm",
     "lat": 38.65,
     "lon": 139.91,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0741s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0741s.htm",
+    "season_end": "2025-03-02"
   },
   {
     "name": "武石番所ヶ原スキー場",
@@ -5385,8 +5529,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0855s.htm",
     "lat": 36.26,
     "lon": 138.11,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0855s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0855s.htm",
+    "season_end": "2025-03-30"
   },
   {
     "name": "水上高原スキーリゾート",
@@ -5402,8 +5547,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0126s.htm",
     "lat": 36.85,
     "lon": 139.08,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0126s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0126s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "水上高原・奥利根温泉 藤原スキー場",
@@ -5419,8 +5565,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0335s.htm",
     "lat": 36.86,
     "lon": 139.07,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0335s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0335s.htm",
+    "season_end": "2026-03-30"
   },
   {
     "name": "水晶山スキー場",
@@ -5436,7 +5583,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0721s.htm",
     "lat": 40.18,
     "lon": 140.76,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0721s.htm"
   },
   {
@@ -5453,7 +5600,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0898s.htm",
     "lat": 35.37,
     "lon": 134.54,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0898s.htm"
   },
   {
@@ -5470,8 +5617,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0859s.htm",
     "lat": 36.11,
     "lon": 138.24,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0859s.htm"
+    "status": "not_yet",
+    "source_url": "https://surfsnow.jp/guide/htm/r0859s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "池の平温泉アルペンブリックスキー場",
@@ -5487,8 +5635,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0168s.htm",
     "lat": 36.87,
     "lon": 138.17,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0168s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0168s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "治部坂高原スキー場",
@@ -5504,7 +5653,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0253s.htm",
     "lat": 35.35,
     "lon": 137.67,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0253s.htm"
   },
   {
@@ -5521,7 +5670,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0153s.htm",
     "lat": 37.62,
     "lon": 140.23,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0153s.htm"
   },
   {
@@ -5538,8 +5687,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0636s.htm",
     "lat": 43.82,
     "lon": 141.96,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0636s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0636s.htm",
+    "season_end": "2026-03-01"
   },
   {
     "name": "泉ヶ岳スキー場",
@@ -5555,8 +5705,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0715s.htm",
     "lat": 38.39,
     "lon": 140.72,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0715s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0715s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "津黒高原スキー場",
@@ -5589,7 +5740,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0989s.htm",
     "lat": 43.72,
     "lon": 144.5,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0989s.htm"
   },
   {
@@ -5623,7 +5774,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0653s.htm",
     "lat": 44.18,
     "lon": 143.61,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0653s.htm"
   },
   {
@@ -5640,8 +5791,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0111s.htm",
     "lat": 36.43,
     "lon": 138.42,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0111s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0111s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "湯殿山スキー場",
@@ -5657,8 +5809,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0742s.htm",
     "lat": 38.57,
     "lon": 139.94,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0742s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0742s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "湯沢パークスキー場",
@@ -5674,8 +5827,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0154s.htm",
     "lat": 36.93,
     "lon": 138.86,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0154s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0154s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "湯沢中里スノーリゾート",
@@ -5691,8 +5845,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0046s.htm",
     "lat": 36.91,
     "lon": 138.85,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0046s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0046s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "湯沢高原スキー場",
@@ -5708,8 +5863,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0301s.htm",
     "lat": 36.94,
     "lon": 138.79,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0301s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0301s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "滝上町桜ケ丘スキー場",
@@ -5742,7 +5898,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0680s.htm",
     "lat": 42.92,
     "lon": 141.39,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0680s.htm"
   },
   {
@@ -5759,7 +5915,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0857s.htm",
     "lat": 36.56,
     "lon": 137.8,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0857s.htm"
   },
   {
@@ -5776,7 +5932,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0819s.htm",
     "lat": 36.57,
     "lon": 137.06,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0819s.htm"
   },
   {
@@ -5793,8 +5949,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0778s.htm",
     "lat": 35.77,
     "lon": 139.42,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0778s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0778s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "琴引フォレストパーク",
@@ -5810,7 +5967,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0015s.htm",
     "lat": 35.05,
     "lon": 132.77,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0015s.htm"
   },
   {
@@ -5827,7 +5984,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0708s.htm",
     "lat": 39.34,
     "lon": 140.78,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0708s.htm"
   },
   {
@@ -5844,7 +6001,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0328s.htm",
     "lat": 36.27,
     "lon": 136.71,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0328s.htm"
   },
   {
@@ -5861,7 +6018,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0267s.htm",
     "lat": 36.35,
     "lon": 136.68,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0267s.htm"
   },
   {
@@ -5878,8 +6035,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0017s.htm",
     "lat": 36.1,
     "lon": 138.24,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0017s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0017s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "白樺高原国際スキー場",
@@ -5895,8 +6053,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0843s.htm",
     "lat": 36.13,
     "lon": 138.28,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0843s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0843s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "白馬コルチナスキー場",
@@ -5912,8 +6071,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0033s.htm",
     "lat": 36.78,
     "lon": 137.89,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0033s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0033s.htm",
+    "season_end": "2026-03-30"
   },
   {
     "name": "白馬乗鞍温泉スキー場",
@@ -5929,8 +6089,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0010s.htm",
     "lat": 36.77,
     "lon": 137.88,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0010s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0010s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "白馬八方尾根スキー場",
@@ -5946,8 +6107,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0142s.htm",
     "lat": 36.7,
     "lon": 137.84,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0142s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0142s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "白馬岩岳スノーフィールド",
@@ -5963,8 +6125,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0143s.htm",
     "lat": 36.72,
     "lon": 137.86,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0143s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0143s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "白鷹町営スキー場",
@@ -5980,7 +6143,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0745s.htm",
     "lat": 38.24,
     "lon": 140.16,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0745s.htm"
   },
   {
@@ -6014,8 +6177,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0788s.htm",
     "lat": 36.98,
     "lon": 138.79,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0788s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0788s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "石狩平原スキー場",
@@ -6031,7 +6195,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0984s.htm",
     "lat": 43.26,
     "lon": 141.51,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0984s.htm"
   },
   {
@@ -6048,7 +6212,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0935s.htm",
     "lat": 33.8,
     "lon": 133.15,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0935s.htm"
   },
   {
@@ -6065,8 +6229,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0083s.htm",
     "lat": 36.91,
     "lon": 138.81,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0083s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0083s.htm",
+    "season_end": "2026-04-19"
   },
   {
     "name": "神鍋高原 万場スキー場",
@@ -6082,7 +6247,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0974s.htm",
     "lat": 35.5,
     "lon": 134.67,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0974s.htm"
   },
   {
@@ -6099,7 +6264,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0133s.htm",
     "lat": 35.94,
     "lon": 136.69,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0133s.htm"
   },
   {
@@ -6133,8 +6298,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0728s.htm",
     "lat": 39.98,
     "lon": 140.8,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0728s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0728s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "稚内市こまどりスキー場",
@@ -6150,7 +6316,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0670s.htm",
     "lat": 45.39,
     "lon": 141.69,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0670s.htm"
   },
   {
@@ -6167,8 +6333,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0732s.htm",
     "lat": 39.17,
     "lon": 140.54,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0732s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0732s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "立山山麓スキー場",
@@ -6184,8 +6351,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0821s.htm",
     "lat": 36.58,
     "lon": 137.42,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0821s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0821s.htm",
+    "season_end": "2026-03-15"
   },
   {
     "name": "竜王スキーパーク",
@@ -6201,8 +6369,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0112s.htm",
     "lat": 36.78,
     "lon": 138.47,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0112s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0112s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "箕輪スキー場",
@@ -6218,8 +6387,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0152s.htm",
     "lat": 37.65,
     "lon": 140.25,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0152s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0152s.htm",
+    "season_end": "2024-03-31"
   },
   {
     "name": "箱館山スキー場",
@@ -6235,7 +6405,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0136s.htm",
     "lat": 35.44,
     "lon": 135.99,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0136s.htm"
   },
   {
@@ -6252,7 +6422,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0227s.htm",
     "lat": 37.86,
     "lon": 140.23,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0227s.htm"
   },
   {
@@ -6269,8 +6439,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0811s.htm",
     "lat": 36.94,
     "lon": 137.9,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0811s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0811s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "紋別市営大山スキー場",
@@ -6286,7 +6457,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0623s.htm",
     "lat": 44.35,
     "lon": 143.34,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0623s.htm"
   },
   {
@@ -6303,8 +6474,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0944s.htm",
     "lat": 37.58,
     "lon": 140.09,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0944s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0944s.htm",
+    "season_end": "2026-03-22"
   },
   {
     "name": "網張温泉スキー場",
@@ -6320,8 +6492,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0700s.htm",
     "lat": 39.82,
     "lon": 140.94,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0700s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0700s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "網走レークビュースキー場",
@@ -6354,8 +6527,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0674s.htm",
     "lat": 43.68,
     "lon": 143.6,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0674s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0674s.htm",
+    "season_end": "2025-03-09"
   },
   {
     "name": "美唄国設スキー場",
@@ -6371,8 +6545,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0642s.htm",
     "lat": 43.32,
     "lon": 141.95,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0642s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0642s.htm",
+    "season_end": "2026-03-23"
   },
   {
     "name": "美深スキー場",
@@ -6405,8 +6580,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0771s.htm",
     "lat": 36.84,
     "lon": 139.08,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0771s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0771s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "羽幌町民スキー場 びゅー",
@@ -6422,8 +6598,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0683s.htm",
     "lat": 44.32,
     "lon": 141.78,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0683s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0683s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "羽黒山スキー場",
@@ -6439,8 +6616,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0740s.htm",
     "lat": 38.69,
     "lon": 139.99,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0740s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0740s.htm",
+    "season_end": "2026-03-01"
   },
   {
     "name": "聖高原スキー場",
@@ -6456,7 +6634,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0854s.htm",
     "lat": 36.49,
     "lon": 138.07,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0854s.htm"
   },
   {
@@ -6507,7 +6685,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0622s.htm",
     "lat": 44.46,
     "lon": 143.11,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0622s.htm"
   },
   {
@@ -6524,8 +6702,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0020s.htm",
     "lat": 36.98,
     "lon": 138.83,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0020s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0020s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "花巻市鉛温泉スキー場",
@@ -6575,7 +6754,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0950s.htm",
     "lat": 40.19,
     "lon": 140.82,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0950s.htm"
   },
   {
@@ -6592,8 +6771,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0047s.htm",
     "lat": 36.79,
     "lon": 138.78,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0047s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0047s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "若杉高原おおやスキー場",
@@ -6609,7 +6789,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0240s.htm",
     "lat": 35.28,
     "lon": 134.59,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0240s.htm"
   },
   {
@@ -6626,7 +6806,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0264s.htm",
     "lat": 35.22,
     "lon": 137.66,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0264s.htm"
   },
   {
@@ -6643,7 +6823,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0038s.htm",
     "lat": 36.63,
     "lon": 138.59,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0038s.htm"
   },
   {
@@ -6660,7 +6840,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0879s.htm",
     "lat": 36.06,
     "lon": 136.96,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0879s.htm"
   },
   {
@@ -6677,8 +6857,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0979s.htm",
     "lat": 36.52,
     "lon": 138.32,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0979s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0979s.htm",
+    "season_end": "2025-03-30"
   },
   {
     "name": "菅平高原スノーリゾート",
@@ -6694,7 +6875,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0108s.htm",
     "lat": 36.53,
     "lon": 138.34,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0108s.htm"
   },
   {
@@ -6711,7 +6892,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0187s.htm",
     "lat": 36.07,
     "lon": 138.26,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0187s.htm"
   },
   {
@@ -6728,8 +6909,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0733s.htm",
     "lat": 38.12,
     "lon": 140.41,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0733s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0733s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "蔵王温泉スキー場",
@@ -6745,8 +6927,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0177s.htm",
     "lat": 38.16,
     "lon": 140.4,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0177s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0177s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "蔵王猿倉スキー場",
@@ -6762,7 +6945,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0746s.htm",
     "lat": 38.13,
     "lon": 140.37,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0746s.htm"
   },
   {
@@ -6779,7 +6962,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0797s.htm",
     "lat": 37.23,
     "lon": 138.99,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0797s.htm"
   },
   {
@@ -6796,7 +6979,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0336s.htm",
     "lat": 37.63,
     "lon": 140.07,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0336s.htm"
   },
   {
@@ -6813,7 +6996,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0743s.htm",
     "lat": 38.44,
     "lon": 140.13,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0743s.htm"
   },
   {
@@ -6830,8 +7013,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0310s.htm",
     "lat": 35.77,
     "lon": 139.44,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0310s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0310s.htm",
+    "season_end": "2019-10-27"
   },
   {
     "name": "豊富温泉スキー場",
@@ -6848,7 +7032,8 @@
     "lat": 45.07,
     "lon": 141.84,
     "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0616s.htm"
+    "source_url": "https://surfsnow.jp/guide/htm/r0616s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "赤倉温泉スキー場",
@@ -6864,8 +7049,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0814s.htm",
     "lat": 36.9,
     "lon": 138.18,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0814s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0814s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "赤倉観光リゾートスキー場",
@@ -6881,7 +7067,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0276s.htm",
     "lat": 36.89,
     "lon": 138.18,
-    "status": "unknown",
+    "status": "open",
     "source_url": "https://surfsnow.jp/guide/htm/r0276s.htm"
   },
   {
@@ -6915,7 +7101,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0891s.htm",
     "lat": 35.55,
     "lon": 136.22,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0891s.htm"
   },
   {
@@ -6966,8 +7152,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0166s.htm",
     "lat": 36.42,
     "lon": 138.63,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0166s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0166s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "軽井沢プリンスホテルスキー場",
@@ -6983,8 +7170,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0129s.htm",
     "lat": 36.34,
     "lon": 138.64,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0129s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0129s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "道後山高原スキー場",
@@ -7000,7 +7188,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0925s.htm",
     "lat": 35.05,
     "lon": 133.2,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0925s.htm"
   },
   {
@@ -7034,8 +7222,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0028s.htm",
     "lat": 36.92,
     "lon": 138.45,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0028s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0028s.htm",
+    "season_end": "2026-05-06"
   },
   {
     "name": "金沢市営医王山スキー場",
@@ -7068,7 +7257,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0808s.htm",
     "lat": 37.1,
     "lon": 138.23,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0808s.htm"
   },
   {
@@ -7085,8 +7274,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0801s.htm",
     "lat": 37.42,
     "lon": 138.89,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0801s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0801s.htm",
+    "season_end": "2025-03-02"
   },
   {
     "name": "長沼スキー場",
@@ -7102,7 +7292,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0647s.htm",
     "lat": 43.04,
     "lon": 141.75,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0647s.htm"
   },
   {
@@ -7119,8 +7309,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0783s.htm",
     "lat": 36.91,
     "lon": 138.16,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0783s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0783s.htm",
+    "season_end": "2026-04-12"
   },
   {
     "name": "阿仁スキー場",
@@ -7136,8 +7327,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0719s.htm",
     "lat": 39.96,
     "lon": 140.49,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0719s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0719s.htm",
+    "season_end": "2025-03-30"
   },
   {
     "name": "阿寒ロイヤルバレイスキー場",
@@ -7170,7 +7362,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0122s.htm",
     "lat": 39.78,
     "lon": 140.93,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0122s.htm"
   },
   {
@@ -7187,8 +7379,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0121s.htm",
     "lat": 40.69,
     "lon": 140.28,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0121s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0121s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "音威富士スキー場",
@@ -7221,7 +7414,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0799s.htm",
     "lat": 37.32,
     "lon": 139.02,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0799s.htm"
   },
   {
@@ -7238,7 +7431,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0873s.htm",
     "lat": 36.24,
     "lon": 137.08,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0873s.htm"
   },
   {
@@ -7255,8 +7448,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0874s.htm",
     "lat": 36.18,
     "lon": 137.49,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0874s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0874s.htm",
+    "season_end": "2025-03-31"
   },
   {
     "name": "飛騨高山スキー場",
@@ -7272,8 +7466,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0878s.htm",
     "lat": 36.14,
     "lon": 137.43,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0878s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0878s.htm",
+    "season_end": "2026-03-31"
   },
   {
     "name": "駒ヶ根高原スキー場",
@@ -7289,8 +7484,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0866s.htm",
     "lat": 35.74,
     "lon": 137.89,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0866s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0866s.htm",
+    "season_end": "2026-03-08"
   },
   {
     "name": "高峰マウンテンパーク（旧アサマ2000パーク）",
@@ -7306,8 +7502,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0836s.htm",
     "lat": 36.41,
     "lon": 138.47,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0836s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0836s.htm",
+    "season_end": "2026-04-19"
   },
   {
     "name": "高柳ガルルのスキー場",
@@ -7323,7 +7520,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0805s.htm",
     "lat": 37.22,
     "lon": 138.64,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0805s.htm"
   },
   {
@@ -7340,8 +7537,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0212s.htm",
     "lat": 36.0,
     "lon": 136.88,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0212s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0212s.htm",
+    "season_end": "2026-04-26"
   },
   {
     "name": "鳥海高原矢島スキー場",
@@ -7357,7 +7555,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0250s.htm",
     "lat": 39.19,
     "lon": 140.09,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0250s.htm"
   },
   {
@@ -7374,8 +7572,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0224s.htm",
     "lat": 35.94,
     "lon": 136.92,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0224s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0224s.htm",
+    "season_end": "2026-04-05"
   },
   {
     "name": "鹿沢スノーエリア",
@@ -7391,7 +7590,7 @@
     "url": "https://surfsnow.jp/guide/htm/r0035s.htm",
     "lat": 36.47,
     "lon": 138.43,
-    "status": "unknown",
+    "status": "closed",
     "source_url": "https://surfsnow.jp/guide/htm/r0035s.htm"
   },
   {
@@ -7408,8 +7607,9 @@
     "url": "https://surfsnow.jp/guide/htm/r0203s.htm",
     "lat": 38.44,
     "lon": 140.54,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0203s.htm"
+    "status": "open",
+    "source_url": "https://surfsnow.jp/guide/htm/r0203s.htm",
+    "season_end": "2026-03-29"
   },
   {
     "name": "黒姫高原スノーパーク",
@@ -7425,7 +7625,8 @@
     "url": "https://surfsnow.jp/guide/htm/r0051s.htm",
     "lat": 36.83,
     "lon": 138.16,
-    "status": "unknown",
-    "source_url": "https://surfsnow.jp/guide/htm/r0051s.htm"
+    "status": "closed",
+    "source_url": "https://surfsnow.jp/guide/htm/r0051s.htm",
+    "season_end": "2026-03-22"
   }
 ]
